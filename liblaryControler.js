@@ -21,7 +21,7 @@ var liblaryControler = {
 	},
 	removeBook: function(){
 			
-			$(".removeBook").click(function(){
+			$("#library").on('click','.removeBook',function(){
 			var number = $(this).val();
 				console.log(number);
 				
