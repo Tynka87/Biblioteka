@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Biblioteka</title>
+	<style>
+		li {clear: both;  margin: 0 0 10px;}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="library.js"></script>
+	<script type="text/javascript" src="book.js"></script>
+	<script type="text/javascript" src="liblaryView.js"></script>
+	<script type="text/javascript" src="author.js"></script>
+	<script type="text/javascript" src="liblaryAuthor.js"></script>
+	<script type="text/javascript" src="localStorageService.js"></script>
+	<script type="text/javascript" src="liblaryControler.js"></script>
+	<script type="text/javascript" src="authorControler.js"></script>
+	<script type="text/javascript" src="authorView.js"></script>
+</head>
+<body>
+<form>
+<fieldset>
+<legend>Dodaj książke</legend>
+<ul>
+   <li>
+	  <label for="title">Tytuł</label>
+      <input required type="text" id="title" name="title" />
+   </li>
+   <li>
+      <label for="author">Autor</label>
+	   <select id="authorlist" name="author">
+		   <option>Wybierz autora</option>
+		   
+	   </select>
+
+	  <label for="author" 
+	   
+   </li>
+   <li>
+      <label for="year">Rok wydania</label>
+      
+	  <input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
+   </li>
+</ul>
+
+<button type="submit" id="send">Wyślij</button>
+
+</fieldset>
+</form>
+	
+<form>
+<fieldset>
+<legend>Dodaj autora</legend>
+<ul>
+	<li>
+	  <label for="id">Id</label>
+      <input required type="number" id="id" name="id" />
+   </li>
+   <li>
+	  <label for="name">Imię</label>
+      <input required type="text" id="name" name="name" />
+   </li>
+   <li>
+      <label for="surname">Nazwisko</label>
+      <input required type="text" id="surname" name="surname" />
+   </li>
+   <!--<li>
+      <label for="dateOfBirth">Rok urodzenia</label>
+      <input type="date" id="dateOfBirth" required/>
+   </li>-->
+</ul>
+
+<button type="submit" id="send2">Wyślij</button>
+<!--<button id="send2">Wyślij2</button>-->
+</fieldset>
+</form>
+
+	<div id="library">
+		<fieldset>
+			<legend>Spis książek</legend>
+			<ul>
+
+
+			</ul>
+		</fieldset>
+	</div>
+		
+
+</body>
+</html>
