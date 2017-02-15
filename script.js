@@ -6,6 +6,8 @@
 	 authorView.showAuthors(liblaryAuthor.getAuthors());
 	 liblaryControler.init();
 	 authorControler.init();
+	 liblaryControler.removeBook();
+	// liblaryView.removeBook();
  
    });
 

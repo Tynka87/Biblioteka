@@ -1,0 +1,20 @@
+#library ul {
+	  list-style: none;
+}
+#library ul p {
+	margin-left: 25px;
+}
+
+#library h4.open {
+	background: url(../images/open.png) no-repeat 0 12px;
+	padding: 10px 0 0 25px;
+	cursor: pointer;
+}
+h4.close {
+	background: url(../images/close.png) no-repeat 0 12px;
+	padding: 10px 0 0 25px;
+	cursor: pointer;
+}
+.removeBook{
+	
+}

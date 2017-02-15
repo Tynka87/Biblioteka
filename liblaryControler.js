@@ -18,7 +18,23 @@ var liblaryControler = {
 	
 		});
 		
+	},
+	removeBook: function(){
+			
+			$(".removeBook").click(function(){
+			var number = $(this).val();
+				console.log(number);
+				
+				
+			liblary.removeBook(number);
+			localStorageService.addLiblarytoLocalStor(liblary.getBooks());
+			liblaryView.clearView();
+			liblaryView.showBooks(liblary.getBooks());
+				
+			});
+	
 	}
+	
 
 	
 };

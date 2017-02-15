@@ -28,7 +28,13 @@ var liblary = {
 	
 	getBooks : function(){
 		return this.liblary;
+	},
+	
+	removeBook : function(number){
+		this.liblary.splice(number, 1);
 	}
+	
+	
 	
 };
 
