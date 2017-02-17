@@ -18,3 +18,11 @@ h4.close {
 .removeBook{
 	
 }
+
+.tooltip {
+	width: 25%;
+	padding: 5px;
+	background-color: white;
+	border: 3px solid rgb(195,151,51);
+	border-radius : 5px;
+}

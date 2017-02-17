@@ -7,7 +7,9 @@
 	 liblaryControler.init();
 	 authorControler.init();
 	 liblaryControler.removeBook();
-	// liblaryView.removeBook();
+	 liblaryControler.editBook();
+	 //liblaryView.editBook();
+	//liblaryView.removeBook();
  
    });
 

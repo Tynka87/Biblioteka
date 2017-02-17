@@ -33,6 +33,16 @@ var liblaryControler = {
 				
 			});
 	
+	},
+	editBook: function(){
+			
+			$("#library").on('click','.editBook',function(){
+			var number = $(this).val();
+				console.log(number);
+				
+	
+			});
+	
 	}
 	
 

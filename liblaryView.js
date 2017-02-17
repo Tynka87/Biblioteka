@@ -14,8 +14,8 @@ var liblaryView = {
 					
 			$('#library fieldset ul').append("<li><h4 class='open'>Tytuł: " + liblaryGetBooks[i].getTitle() + "</h4>" 
 											 + "<p>Autor: " + liblaryGetBooks[i].getAuthor() + "</p>" 
-											 + "<p>Rok wydania: " + liblaryGetBooks[i].getYear() + "</p></li>" );
-			$('#library fieldset ul').append("<button class='removeBook' value="+ i +">Usuń książke</button>");
+											 + "<p>Rok wydania: " + liblaryGetBooks[i].getYear() + "</p>" + "<div class='button_book'><button class='removeBook' value=" + i +">Usuń książke</button>" + " <button class='editBook' value=" + i +">Edytuj książke</button></div></li>" );
+			
 		
 		
 		}
@@ -23,9 +23,11 @@ var liblaryView = {
 	removeBook : function(){
 			
 		$('.removeBook').hide();
- 		$('#library h4').toggle(
-		function() {
-	       $(this).next('.removeBook').slideDown();
+		console.log($('#library h4'));
+ 	
+		$('#library h4').toggle(function() {
+			$(this).next('.removeBook').slideDown();
+	      console.log("test" + $(this).next('.removeBook'));
 		   $(this).addClass('close');
 			$(this).removeClass('open');
 			
@@ -37,6 +39,11 @@ var liblaryView = {
 	  }
 	); // koniec funkcji toggle
 	
+	},
+	
+	editBook : function(){
+	
+		
 	}
 
 	
