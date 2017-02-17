@@ -7,7 +7,7 @@ var localStorageService = {
 			
 		}else{
 			
-			$.getJSON( "library.json", function(data) {
+			$.getJSON( "resource/library.json", function(data) {
 				
 				liblary.addBooks(data);
 				var _JSON = JSON.stringify(data);
@@ -25,7 +25,7 @@ var localStorageService = {
 			
 		}else{
 			
-			$.getJSON("liblaryAuthor.json", function(data) {
+			$.getJSON("resource/liblaryAuthor.json", function(data) {
 				
 				liblaryAuthor.addAuthors(data);
 				var _JSON = JSON.stringify(data);

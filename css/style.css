@@ -1,6 +1,7 @@
 #library ul {
-	  list-style: none;
+	list-style: none;
 }
+
 #library ul p {
 	margin-left: 25px;
 }
@@ -10,19 +11,29 @@
 	padding: 10px 0 0 25px;
 	cursor: pointer;
 }
+
 h4.close {
 	background: url(../images/close.png) no-repeat 0 12px;
 	padding: 10px 0 0 25px;
 	cursor: pointer;
 }
-.removeBook{
-	
-}
+
+.removeBook {}
 
 .tooltip {
 	width: 25%;
 	padding: 5px;
 	background-color: white;
-	border: 3px solid rgb(195,151,51);
-	border-radius : 5px;
+	border: 3px solid blue;
+	border-radius: 5px;
+	position: fixed;
+	z-index: 2;
+	top: 20%;
+	left: 30%;
+}
+
+#cross {
+	cursor: pointer;
+	text-align: right;
+	/*	background: url(../images/cross.png) no-repeat 0 12px;*/
 }
