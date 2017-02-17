@@ -33,8 +33,10 @@ var liblary = {
 	removeBook : function(number){
 		this.liblary.splice(number, 1);
 	},
-	editBook : function(number){
-		//this.liblary.splice(number, 1);
+	getBook : function(number){
+		console.log(this.liblary[number].getTitle());
+		return this.liblary[number];
+	
 	}
 	
 	

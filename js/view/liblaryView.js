@@ -35,7 +35,11 @@ var liblaryView = {
 
 	},
 
-	editBook: function () {
+	editBook: function (book) {
+		var tooltip = $('#title').html();
+		console.log('tooltip' + tooltip);
+		//$('li #title').append("<input required type='text' name='title' value ='" + book.getTitle() +"' />" );
+
 
 	}
 };

@@ -39,11 +39,13 @@ var liblaryControler = {
 		$("#library").on('click', '.editBook', function () {
 			var number = $(this).val();
 			console.log(number);
-			$('.popUp').load('html/editBook.html');
+			$('.popUp').load('html/editBook.html', function(){
+				liblaryView.editBook(liblary.getBook(number));
+			});
+			//liblary.getBook(number);
 
 
-			//liblaryView.editBook;
-
+			
 
 		});
 

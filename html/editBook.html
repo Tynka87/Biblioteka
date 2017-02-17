@@ -1,5 +1,32 @@
 <div class="tooltip" >
 	<div id="cross"><img src="images/cross.png" alt="X" /></div>
-       <h2>Etykieta</h2>
-       <p>To jest tekst etykiety. Został on umieszczony wewnątrz znacznika div, dzięki temu można tu umieścić prawie wszystko.</p>
+<!--       <h2>Książka do edycji</h2>-->
+	<form>
+		<fieldset>
+			<legend>Edytuj książke</legend>
+			<ul>
+				<li id="title">
+					<label for="title">Tytuł</label>
+					<input required type="text" id="title" name="title" />
+				</li>
+				<li>
+					<label for="author">Autor</label>
+					<select id="authorlist" name="author">
+						<option>Wybierz autora</option>
+
+					</select>
+
+					<label for="author" </li>
+						<li>
+							<label for="year">Rok wydania</label>
+
+							<input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
+						</li>
+			</ul>
+
+			<button type="submit" id="send">Wyślij</button>
+
+		</fieldset>
+	</form>
+      
 </div>	
