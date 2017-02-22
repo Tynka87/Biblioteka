@@ -22,6 +22,8 @@
 	<script type="text/javascript" src="js/controler/liblaryControler.js"></script>
 	<script type="text/javascript" src="js/controler/authorControler.js"></script>
 	<script type="text/javascript" src="js/view/authorView.js"></script>
+	<script type="text/javascript" src="js/utils/utils.js"></script>
+
 </head>
 
 <body>
@@ -31,7 +33,7 @@
 			<ul>
 				<li>
 					<label for="title">Tytuł</label>
-					<input required type="text" id="title" name="title" />
+					<input required type="text" name="title" id="title" />
 				</li>
 				<li>
 					<label for="author">Autor</label>
@@ -40,15 +42,15 @@
 
 					</select>
 
-					<label for="author" </li>
-						<li>
-							<label for="year">Rok wydania</label>
+				</li>
+				<li>
+					<label for="year">Rok wydania</label>
 
-							<input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
-						</li>
+					<input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
+				</li>
 			</ul>
 
-			<button type="submit" id="send">Wyślij</button>
+			<button type="submit" id="send">Zapisz</button>
 
 		</fieldset>
 	</form>
@@ -69,11 +71,11 @@
 					<label for="surname">Nazwisko</label>
 					<input required type="text" id="surname" name="surname" />
 				</li>
-				
+
 			</ul>
 
-			<button type="submit" id="send2">Wyślij</button>
-			
+			<button type="submit" id="send2">Zapisz</button>
+
 		</fieldset>
 	</form>
 

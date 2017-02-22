@@ -38,8 +38,12 @@ var liblaryView = {
 	editBook: function (book) {
 		var tooltip = $('#title').html();
 		console.log('tooltip' + tooltip);
-		//$('li #title').append("<input required type='text' name='title' value ='" + book.getTitle() +"' />" );
-
+		$("#titleInPopUp").val(book.getTitle());
+		$("#yearInPopUp").val(book.getYear());
+		console.log("Moj autor: " + book.getAuthor());
+		//$('li #title').append(" value ='" + book.getTitle() +"'" );
+		
+		
 
 	}
 };

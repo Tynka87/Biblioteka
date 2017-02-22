@@ -8,17 +8,14 @@ var authorView = {
 
 
 
-	showAuthors: function (liblaryGetAuthors) {
+	showAuthors: function (authors) {
 
+		$('#authorlist').append(prepareOptionList(authors));
+	},
 
-		for (var i = 0; i < liblaryGetAuthors.length; i++) {
-
-
-			$('#authorlist').append("<option value =" + liblaryGetAuthors[i].getId() + ">" + liblaryGetAuthors[i].getName() + " " + liblaryGetAuthors[i].getSurname() + "</option>");
-
-
-
-		}
+	showAuthorsInPopUp: function (authors, book) {
+		$('#authorlistInPopUp').append(prepareOptionList(authors));
+		$("#authorlistInPopUp option[value='" + book.getAuthor() + "']").attr("selected", "selected")
 	}
 
 

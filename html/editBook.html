@@ -1,32 +1,33 @@
-<div class="tooltip" >
+<div class="tooltip">
 	<div id="cross"><img src="images/cross.png" alt="X" /></div>
-<!--       <h2>Książka do edycji</h2>-->
+	<!--       <h2>Książka do edycji</h2>-->
 	<form>
 		<fieldset>
 			<legend>Edytuj książke</legend>
 			<ul>
 				<li id="title">
 					<label for="title">Tytuł</label>
-					<input required type="text" id="title" name="title" />
+					<input required type="text" id="titleInPopUp" name="title" value="" />
 				</li>
 				<li>
 					<label for="author">Autor</label>
-					<select id="authorlist" name="author">
+					<select id="authorlistInPopUp" name="author">
 						<option>Wybierz autora</option>
+						<option>test</option>
 
 					</select>
 
-					<label for="author" </li>
-						<li>
-							<label for="year">Rok wydania</label>
+				</li>
+				<li>
+					<label for="year" >Rok wydania</label>
 
-							<input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
-						</li>
+					<input id="yearInPopUp" type="number" min="1900" max="2099" step="1" value="2017" required/>
+				</li>
 			</ul>
 
-			<button type="submit" id="send">Wyślij</button>
+			<button type="submit" id="send">Zapisz</button>
 
 		</fieldset>
 	</form>
-      
-</div>	
+
+</div>

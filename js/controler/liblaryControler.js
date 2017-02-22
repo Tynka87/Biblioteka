@@ -39,13 +39,21 @@ var liblaryControler = {
 		$("#library").on('click', '.editBook', function () {
 			var number = $(this).val();
 			console.log(number);
-			$('.popUp').load('html/editBook.html', function(){
+			$('.popUp').load('html/editBook.html', function () {
+
+
 				liblaryView.editBook(liblary.getBook(number));
+				authorView.showAuthorsInPopUp(liblaryAuthor.getAuthors(), liblary.getBook(number));
+
+				/*	var test=liblary.getBook(number);	
+				console.log("Moj liblary.geAuthor" + test.getAuthor());
+					$("#authorlistInPopUp option[value='"+ test.getAuthor()+"']").attr("selected", "selected")*/
+
+
 			});
-			//liblary.getBook(number);
 
 
-			
+
 
 		});
 
