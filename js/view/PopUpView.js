@@ -1,6 +1,6 @@
 var popUpView = {
 
-	editBook: function (book) {
+	renderEditBook: function (book) {
 		var tooltip = $('#title').html();
 		console.log('tooltip' + tooltip);
 		$("#titleInPopUp").val(book.getTitle());

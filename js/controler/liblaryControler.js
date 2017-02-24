@@ -1,6 +1,11 @@
 var liblaryControler = {
 
 	init: function () {
+		
+	
+ 	this.editBook();
+ 	this.closePopUp();
+	this.removeBook();
 
 		$("#send").click(function () {
 			//e.preventDefault();
@@ -29,8 +34,7 @@ var liblaryControler = {
 
 			liblary.removeBook(number);
 			localStorageService.addLiblarytoLocalStor(liblary.getBooks());
-			liblaryView.clearView();
-			liblaryView.showBooks(liblary.getBooks());
+			liblaryView.clearView();		liblaryView.showBooks(liblary.getBooks(),liblaryAuthor.getAuthors());
 
 		});
 
@@ -43,7 +47,7 @@ var liblaryControler = {
 			$('.popUp').load('html/editBook.html', function () {
 
 
-				popUpView.editBook(liblary.getBook(number));
+				popUpView.renderEditBook(liblary.getBook(number));
 				popUpView.showAuthorsInPopUp(liblaryAuthor.getAuthors(), liblary.getBook(number));
 
 			});
@@ -54,7 +58,7 @@ var liblaryControler = {
 		});
 
 	},
-	cross: function () {
+	closePopUp: function () {
 
 		$(".popUp").on('click', '#cross', function () {
 			console.log("test");
