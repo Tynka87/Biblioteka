@@ -12,8 +12,9 @@ var liblaryControler = {
 
 			liblary.addBook(title, author, year);
 			localStorageService.addLiblarytoLocalStor(liblary.getBooks());
+		
 			liblaryView.clearView();
-			liblaryView.showBooks(liblary.getBooks());
+			liblaryView.showBooks(liblary.getBooks(),liblaryAuthor.getAuthors());
 
 
 		});

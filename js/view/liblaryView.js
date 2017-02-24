@@ -6,11 +6,12 @@ var liblaryView = {
 		$('#library fieldset ul button').remove();
 	},
 
-	showBooks: function (liblaryGetBooks) {
-
+	showBooks: function (liblaryGetBooks, authors) {
+		var nr = "";
 		for (var i = 0; i < liblaryGetBooks.length; i++) {
 
-			$('#library fieldset ul').append("<li><h4 class='open'>Tytuł: " + liblaryGetBooks[i].getTitle() + "</h4>" + "<p>Autor: " + liblaryGetBooks[i].getAuthor() + "</p>" + "<p>Rok wydania: " + liblaryGetBooks[i].getYear() + "</p>" + "<div class='button_book'><button class='removeBook' value=" + i + ">Usuń książke</button>" + " <button class='editBook' value=" + i + ">Edytuj książke</button></div></li>");
+			nr = liblaryGetBooks[i].getAuthor() - 1
+			$('#library fieldset ul').append("<li><h4 class='open'>Tytuł: " + liblaryGetBooks[i].getTitle() + "</h4>" + "<p>Autor: " + authors[nr].getName() + " " + authors[nr].getSurname() + "</p>" + "<p>Rok wydania: " + liblaryGetBooks[i].getYear() + "</p>" + "<div class='button_book'><button class='removeBook' value=" + i + ">Usuń książke</button>" + " <button class='editBook' value=" + i + ">Edytuj książke</button></div></li>");
 
 		}
 	},
@@ -35,5 +36,5 @@ var liblaryView = {
 
 	},
 
-	
+
 };
