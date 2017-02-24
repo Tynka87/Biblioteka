@@ -6,17 +6,10 @@ var authorView = {
 	},
 
 
-
-
 	showAuthors: function (authors) {
 
 		$('#authorlist').append(prepareOptionList(authors));
 	},
-
-	showAuthorsInPopUp: function (authors, book) {
-		$('#authorlistInPopUp').append(prepareOptionList(authors));
-		$("#authorlistInPopUp option[value='" + book.getAuthor() + "']").attr("selected", "selected")
-	}
 
 
 };
