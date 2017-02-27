@@ -7,19 +7,30 @@ var liblaryControler = {
  	this.closePopUp();
 	this.removeBook();
 
-		$("#send").click(function () {
-			//e.preventDefault();
+/*		$("#formBook").submit(function (e) {
+			e.preventDefault();
 			var title = $("#title").val();
 			var author = $("#authorlist option:selected").val();
 			var year = $("#year").val();
 
 
 
-			liblary.addBook(title, author, year);
-			localStorageService.addLiblarytoLocalStor(liblary.getBooks());
+			liblary.addBook(title, author, year);			localStorageService.addLiblarytoLocalStor(liblary.getBooks());		
+			liblaryView.clearView();			liblaryView.showBooks(liblary.getBooks(),liblaryAuthor.getAuthors()); 
+
+
+		});*/
 		
-			liblaryView.clearView();
-			liblaryView.showBooks(liblary.getBooks(),liblaryAuthor.getAuthors());
+			$("body").on('submit', '#formBook',function () {
+			//e.preventDefault();
+			var title = $(this.title).val();
+			var author = $(this.authorlist).val() || $(this.authorlistInPopUp).val() ;
+			var year = $(this.year).val() || $(this.yearInPopUp).val() ;
+
+
+
+			liblary.addBook(title, author, year);			localStorageService.addLiblarytoLocalStor(liblary.getBooks());		
+			liblaryView.clearView();			liblaryView.showBooks(liblary.getBooks(),liblaryAuthor.getAuthors()); 
 
 
 		});
