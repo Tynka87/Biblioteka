@@ -1,16 +1,14 @@
 var popUpView = {
 
-	renderEditBook: function (book) {
-		var tooltip = $('#title').html();
-		console.log('tooltip' + tooltip);
-		$("#titleInPopUp").val(book.getTitle());
-		$("#yearInPopUp").val(book.getYear());
-		console.log("Moj autor: " + book.getAuthor());
-		//$('li #title').append(" value ='" + book.getTitle() +"'" );
+	renderEditBook: function (book,index) {
+		$(".tooltip #titleInPopUp").val(book.getTitle());
+		$(".tooltip #year").val(book.getYear());
+		$(".tooltip #index").val(index);
+		
 	},
 	showAuthorsInPopUp: function (authors, book) {
-		$('#authorlistInPopUp').append(prepareOptionList(authors));
-		$("#authorlistInPopUp option[value='" + book.getAuthor() + "']").attr("selected", "selected")
+		$('.tooltip #authorlist').append(prepareOptionList(authors));
+		$(".tooltip #authorlist option[value='" + book.getAuthor() + "']").attr("selected", "selected")
 	}
 
 };
