@@ -1,4 +1,10 @@
-#library ul {
+header{
+	background-image: url(../images/1731.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-left: 5%;
+}
+/*#library ul {
 	list-style: none;
 }
 
@@ -18,9 +24,9 @@ h4.close {
 	cursor: pointer;
 }
 
-.removeBook {}
+.removeBook {}*/
 
-.tooltip {
+/*.tooltip {
 	width: 25%;
 	padding: 5px;
 	background-color: white;
@@ -30,8 +36,8 @@ h4.close {
 	z-index: 2;
 	top: 20%;
 	left: 30%;
-}
-.tooltip h2 {
+}*/
+/*.tooltip h2 {
 	text-align: center;
 	
 }
@@ -39,5 +45,5 @@ h4.close {
 #cross {
 	cursor: pointer;
 	text-align: right;
-	/*	background: url(../images/cross.png) no-repeat 0 12px;*/
-}
+		background: url(../images/cross.png) no-repeat 0 12px;
+}*/

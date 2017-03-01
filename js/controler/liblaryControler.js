@@ -23,13 +23,16 @@ var liblaryControler = {
 		
 			$("body").on('submit', '#formBook',function () {
 			//e.preventDefault();
+			var index = undefined;
 			var title = $(this.title).val();
 			var author = $(this.authorlist).val();
 			var year = $(this.year).val();
-			var index = $(this.index).val();
+			index = $(this.index).val();
 
-			liblary.addBook(title, author, year, index);			localStorageService.addLiblarytoLocalStor(liblary.getBooks());		
+			liblary.addBook(title, author, year, index);			localStorageService.addLiblarytoLocalStor(liblary.getBooks());	
+				
 			liblaryView.clearView();			liblaryView.showBooks(liblary.getBooks(),liblaryAuthor.getAuthors()); 
+				
 
 
 		});

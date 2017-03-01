@@ -6,11 +6,11 @@ var liblary = {
 	addBook: function (title, author, year, index) {
 		var book = new Book(title, author, year);
 
-		if (index != 'undefined') {
-			this.liblary.splice(index, 1, book);
-
-		} else {
+		if (index == undefined) {
+			
 			this.liblary.push(book);
+		} else {
+			this.liblary.splice(index, 1, book);
 		};
 
 

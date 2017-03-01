@@ -12,7 +12,7 @@ var liblaryView = {
 
 			nr = books[i].getAuthor() - 1
 			console.log("Numer autora: "+ nr);
-			$('#library fieldset ul').append("<li><h4 class='open'>Tytuł: " + books[i].getTitle() + "</h4>" + "<p>Autor: " + authors[nr].getName() + " " + authors[nr].getSurname() + "</p>" + "<p>Rok wydania: " + books[i].getYear() + "</p>" + "<div class='button_book'><button class='removeBook' value=" + i + ">Usuń książke</button>" + " <button class='editBook' value=" + i + ">Edytuj książke</button></div></li>");
+			$('#library fieldset ul').append("<div class='col-md-4'><li><h4 class='open'>Tytuł: " + books[i].getTitle() + "</h4>" + "<p>Autor: " + authors[nr].getName() + " " + authors[nr].getSurname() + "</p>" + "<p>Rok wydania: " + books[i].getYear() + "</p>" + "<div class='button_book'><button class='removeBook' value=" + i + ">Usuń książke</button>" + " <button class='editBook' value=" + i + ">Edytuj książke</button></div></li></div>");
 
 		}
 	},

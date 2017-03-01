@@ -3,15 +3,17 @@
 
 <head>
 	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Biblioteka</title>
 	<link href="css/style.css" rel="stylesheet">
-	<style>
-		li {
-			clear: both;
-			margin: 0 0 10px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/model/liblary.js"></script>
 	<script type="text/javascript" src="js/model/book.js"></script>
@@ -25,72 +27,161 @@
 	<script type="text/javascript" src="js/view/PopUpView.js"></script>
 	<script type="text/javascript" src="js/utils/utils.js"></script>
 
+	<script>
+		$(document).ready(function () {
+			$("#myTab a").click(function (e) {
+				e.preventDefault()
+				$(this).tab("show")
+			});
+		});
+	</script>
+
+
+
 </head>
 
 <body>
-	<form id="formBook">
-		<fieldset>
-			<legend>Dodaj książke</legend>
-			<ul>
-				<li>
-					<label for="title">Tytuł</label>
-					<input required type="text" name="title" id="title" />
-				</li>
-				<li>
-					<label for="author">Autor</label>
-					<select id="authorlist" name="author">
-					
+	<div class="container-fluid">
+		<header class="row">
+			<div class="col-lg-6">
+				<img src="images/logo.gif">
+			</div>
+		</header>
 
-					</select>
-
-				</li>
-				<li>
-					<label for="year">Rok wydania</label>
-
-					<input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
-				</li>
-			</ul>
-
-			<button type="submit" id="send">Zapisz</button>
-
-		</fieldset>
-	</form>
-
-	<form>
-		<fieldset>
-			<legend>Dodaj autora</legend>
-			<ul>
-				<li>
-					<label for="id">Id</label>
-					<input required type="number" id="id" name="id" />
-				</li>
-				<li>
-					<label for="name">Imię</label>
-					<input required type="text" id="name" name="name" />
-				</li>
-				<li>
-					<label for="surname">Nazwisko</label>
-					<input required type="text" id="surname" name="surname" />
-				</li>
-
-			</ul>
-
-			<button type="submit" id="send2">Zapisz</button>
-
-		</fieldset>
-	</form>
-
-	<div id="library">
-		<fieldset>
-			<legend>Spis książek</legend>
-			<ul>
-
-
-			</ul>
-		</fieldset>
 	</div>
-	<div class="popUp"></div>
 
+
+	<!-- Nagłówki -->
+	<!--
+<nav class="navbar navbar-inverse">
+<ul class="nav nav-tabs">
+  <li><a href="#tab1" data-toggle="tab">Zakładka 1</a></li>
+  <li><a href="#tab2" data-toggle="tab">Zakładka 2</a></li>
+  <li><a href="#tab3" data-toggle="tab">Zakładka 3</a></li>
+</ul>
+  </nav> 
+-->
+	<!-- Karty -->
+	<!--
+<div class="tab-content">
+  <div class="tab-pane active" id="tab1">Lorem Ipsum...</div>
+  <div class="tab-pane" id="tab2">...jest tekstem...</div>
+  <div class="tab-pane" id="tab3">...stosowanym jako</div>
+</div>
+-->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#tab1" data-toggle="tab">Biblioteka</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#tab1" data-toggle="tab">Spis książek</a></li>
+					<li><a href="#tab2" data-toggle="tab">Autorzy</a></li>
+					<li><a href="#tab3" data-toggle="tab">Dodawanie książek</a></li>
+				</ul>
+			</div>
+			<!--	  /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<!--------------------KONIEC-------------------------->
+
+	<!-- Karty -->
+	<div class="tab-content">
+		<div class="tab-pane active" id="tab1">
+			<div class="row">
+			<div class="col-lg-12">
+				<div id="library">
+					<fieldset>
+						<legend>Spis książek</legend>
+						<ul>
+
+
+						</ul>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="tab-pane" id="tab2">Lista autorów</div>
+		<div class="tab-pane" id="tab3">	<div class="row">
+			<div class="col-lg-4">
+				<form id="formBook" class="form-horizontal">
+					<fieldset>
+						<legend>Dodaj książke</legend>
+						<ul>
+							<li>
+								<label for="title">Tytuł</label>
+								<input required type="text" name="title" id="title" />
+							</li>
+							<li>
+								<label for="author">Autor</label>
+								<select id="authorlist" name="author">
+
+
+								</select>
+
+							</li>
+							<li>
+								<label for="year">Rok wydania</label>
+
+								<input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
+							</li>
+						</ul>
+
+						<button type="submit" id="send">Zapisz</button>
+
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<form>
+					<fieldset>
+						<legend>Dodaj autora</legend>
+						<ul>
+							<li>
+								<label for="id">Id</label>
+								<input required type="number" id="id" name="id" />
+							</li>
+							<li>
+								<label for="name">Imię</label>
+								<input required type="text" id="name" name="name" />
+							</li>
+							<li>
+								<label for="surname">Nazwisko</label>
+								<input required type="text" id="surname" name="surname" />
+							</li>
+
+						</ul>
+
+						<button type="submit" id="send2">Zapisz</button>
+
+					</fieldset>
+				</form>
+			</div>
+		</div></div>
+	</div>
+
+
+
+
+	<div class="container">
+	
+		
+		<div class="popUp"></div>
+	</div>
 </body>
 
 </html>
