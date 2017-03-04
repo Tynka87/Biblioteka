@@ -2,10 +2,11 @@ var liblaryControler = {
 
 	init: function () {
 		
-	
+	this.showFullBook();
  	this.editBook();
  	this.closePopUp();
 	this.removeBook();
+
 
 /*		$("#formBook").submit(function (e) {
 			e.preventDefault();
@@ -41,11 +42,12 @@ var liblaryControler = {
 	},
 	removeBook: function () {
 
-		$("#library").on('click', '.removeBook', function () {
+		$(".popUp").on('click', '#removeButton', function () {
 			var number = $(this).val();
-			console.log(number);
+			console.log("Numer: " + number);
+			console.log("removeBook ");
 
-
+			$('.modal ').modal('hide');
 			liblary.removeBook(number);
 			localStorageService.addLiblarytoLocalStor(liblary.getBooks());
 			liblaryView.clearView();		liblaryView.showBooks(liblary.getBooks(),liblaryAuthor.getAuthors());
@@ -55,15 +57,16 @@ var liblaryControler = {
 	},
 	editBook: function () {
 
-		$("#library").on('click', '.editBook', function () {
+		$(".popUp").on('click', '#editButton', function () {
 			var number = $(this).val();
 			console.log(number);
+			popUpView.clearViewInPopUp();
 			$('.popUp').load('html/editBook.html', function () {
 
-
-				popUpView.renderEditBook(liblary.getBook(number),number);
+				console.log("Edit Book");
+				/*popUpView.renderEditBook(liblary.getBook(number),number);
 				popUpView.showAuthorsInPopUp(liblaryAuthor.getAuthors(), liblary.getBook(number));
-
+*/
 			});
 
 
@@ -75,8 +78,29 @@ var liblaryControler = {
 	closePopUp: function () {
 
 		$(".popUp").on('click', '#cross', function () {
+	
 			console.log("test");
 			$('.popUp .tooltip').remove();
+
+
+		});
+
+	},
+	showFullBook: function () {
+
+		$("#library").on('click', '.btn', function () {
+			var number = $(this).val();
+		
+			console.log("test test");
+			$('.popUp').load('html/showFullBook.html', function () {
+
+				$('.modal ').modal('show');
+				popUpView.showBookInPopUp(liblary.getBook(number),number);
+				popUpView.showAuthorsInPopUp(liblaryAuthor.getAuthors(), liblary.getBook(number));
+
+			});
+
+
 
 
 		});

@@ -2,8 +2,7 @@ var liblaryView = {
 	liblaryView: [],
 
 	clearView: function () {
-		$('#library fieldset ul li').remove();
-		$('#library fieldset ul button').remove();
+		$('#library fieldset ul .col-md-4').remove();		
 	},
 
 	showBooks: function (books, authors) {
@@ -11,11 +10,12 @@ var liblaryView = {
 		for (var i = 0; i < books.length; i++) {
 
 			nr = books[i].getAuthor() - 1
-			console.log("Numer autora: "+ nr);
-			$('#library fieldset ul').append("<div class='col-md-4'><li><h4 class='open'>Tytuł: " + books[i].getTitle() + "</h4>" + "<p>Autor: " + authors[nr].getName() + " " + authors[nr].getSurname() + "</p>" + "<p>Rok wydania: " + books[i].getYear() + "</p>" + "<div class='button_book'><button class='removeBook' value=" + i + ">Usuń książke</button>" + " <button class='editBook' value=" + i + ">Edytuj książke</button></div></li></div>");
+			console.log("Numer autora: " + nr);
+			$('#library fieldset ul').append("<div class='col-md-4'><li><button class='btn' value=" + i + ">Tytuł: " + books[i].getTitle() + "</button>" + "<p>Autor: " + authors[nr].getName() + " " + authors[nr].getSurname() + "</p>" + "<p>Rok wydania: " + books[i].getYear() + "</p>");
 
 		}
 	},
+/*
 	removeBook: function () {
 
 		$('.removeBook').hide();
@@ -36,6 +36,7 @@ var liblaryView = {
 		); // koniec funkcji toggle
 
 	},
+*/
 
 
 };
