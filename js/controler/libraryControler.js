@@ -1,10 +1,8 @@
-svar libraryControler = {
+var libraryControler = {
 
 	init: function () {
 
-		this.showFullBook();
-		this.editBook();
-		this.closePopUp();
+		this.showFullBook();			
 		this.removeBook();
 
 
