@@ -3,52 +3,44 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="gridSystemModalLabel">Edytuj książke
-					
+				<h4 class="modal-title" id="gridSystemModalLabel">Edytuj książke				
 				</h4>
 			</div>
 			<div class="modal-body">
-				<div class="row">
-					<div class="col-md-12" id="book">
-						<form >
-						<ul>
-							<div class="col-md-6">
-								<li id="title">
-									<label for="title">Tytuł</label>
-									<input required type="text" id="titleInPopUp" name="title" value="" />
-								</li>
-								<li>
-									<label for="author">Autor</label>
-									<select id="authorlist" name="author">
-
-									</select>
-								</li>
-							</div>
-							<div class="col-md-6">
-								<li>
-									<label for="year">Rok wydania</label>
-
-									<input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
-								</li>
-								<INPUT id="index" type="HIDDEN" NAME="nazwa" VALUE="">
-								</INPUT>
-							</div>
+				<form id="formBook">
+					<div class="row">
+						<div class="col-md-12" id="book">
+							<ul>
+								<div class="col-md-6">
+									<li id="title">
+										<label for="title">Tytuł</label>
+										<input required type="text" id="titleInPopUp" name="title" value="" />
+									</li>
+									<li>
+										<label for="author">Autor</label>
+										<select id="authorlist" name="author">
+										</select>
+									</li>
+								</div>
+								<div class="col-md-6">
+									<li>
+										<label for="year">Rok wydania</label>
+										<input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
+									</li>
+									<INPUT id="index" type="HIDDEN" NAME="nazwa" VALUE="">
+									</INPUT>
+								</div>
 							</ul>
-			
-
-					
-					</form>
-</div>
-					
-
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" id="removeButton">Usuń książke</button>
+						<button type="submit" class="btn btn-primary" >Zapisz zmiany</button>
+					</div>
+				</form>
 			</div>
-			<div class="modal-footer" id="formBook">
-				<button type="button" class="btn btn-default" id="removeButton">Usuń książke</button>
-				<button type="button" class="btn btn-primary" type="submit" id="send">Zapisz zmiany</button>
-			</div>
+			<!-- /.modal-content -->
 		</div>
-		<!-- /.modal-content -->
+		<!-- /.modal-dialog -->
 	</div>
-	<!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+	<!-- /.modal -->

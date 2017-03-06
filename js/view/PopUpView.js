@@ -5,13 +5,10 @@ var popUpView = {
 	},
 
 	showBookInPopUp: function(book,index){		
-		$('#gridSystemModalLabel').append(book.getTitle());		
-		
+		$('#gridSystemModalLabel').append(book.getTitle());			
 		$(".modal-body #titleInPopUp").val(book.getTitle());
 		$(".modal-body #year").val(book.getYear());
-		$(".modal-body #index").val(index);
-		
-		
+		$(".modal-body #index").val(index);		
 		$(".modal-footer #send").val(index);
 		$(".modal-footer #removeButton").val(index);
 	},
