@@ -1,20 +1,20 @@
-var liblary = {
-	liblary: [],
+var library = {
+	library: [],
 
 
 	addBook: function (title, author, year, index) {
 		var book = new Book(title, author, year);
 
 		if (index == undefined) {
-			this.liblary.push(book);
+			this.library.push(book);
 		} else {
-			this.liblary.splice(index, 1, book);
+			this.library.splice(index, 1, book);
 		};
 	},
 
 	addBook2: function (_json) {
 		var book = new Book(_json.title, _json.author, _json.year);
-		this.liblary.push(book);
+		this.library.push(book);
 	},
 
 	addBooks: function (_json) {
@@ -24,15 +24,15 @@ var liblary = {
 	},
 
 	getBooks: function () {
-		return this.liblary;
+		return this.library;
 	},
 
 	removeBook: function (number) {
-		this.liblary.splice(number, 1);
+		this.library.splice(number, 1);
 	},
 	
 	getBook: function (number) {
-		console.log(this.liblary[number].getTitle());
-		return this.liblary[number];
+		console.log(this.library[number].getTitle());
+		return this.library[number];
 	},
 };

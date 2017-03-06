@@ -2,9 +2,10 @@
 
  	localStorageService.init();
  	localStorageService.initAuthor();
- 	authorView.showAuthors(liblaryAuthor.getAuthors());
- 	liblaryView.showBooks(liblary.getBooks(), liblaryAuthor.getAuthors());
- 	liblaryControler.init();
+ 	libraryView.showAuthorsInBook(libraryAuthor.getAuthors());
+ 	libraryView.showBooks(library.getBooks(), libraryAuthor.getAuthors());
+	authorView.showAuthors(libraryAuthor.getAuthors());
+ 	libraryControler.init();
  	authorControler.init();
 
  });

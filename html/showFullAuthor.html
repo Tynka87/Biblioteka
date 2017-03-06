@@ -1,0 +1,41 @@
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="gridSystemModalLabel">Autor: 				
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form id="formAuthor">
+					<div class="row">
+						<div class="col-md-12" id="author">
+							<ul>
+								<li>
+									<label for="id">Id</label>
+									<input required id="id" name="id" disabled="disabled"/>
+								</li>
+								<li>
+									<label for="name">Imię</label>
+									<input required type="text" id="name" name="name" />
+								</li>
+								<li>
+									<label for="surname">Nazwisko</label>
+									<input required type="text" id="surname" name="surname" />
+								</li>
+								<INPUT id="index" type="HIDDEN" NAME="nazwa" VALUE="">
+								</INPUT>
+							</ul>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" id="removeButtonInAuthor">Usuń autora</button>
+						<button type="submit" class="btn btn-primary" id="send2" >Zapisz zmiany</button>
+					</div>
+				</form>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->

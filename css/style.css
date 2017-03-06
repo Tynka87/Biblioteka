@@ -4,6 +4,10 @@ header{
 	background-size: cover;
 	padding-left: 5%;
 }
+
+li{
+	list-style-type: circle;
+}
 /*#library ul {
 	list-style: none;
 }

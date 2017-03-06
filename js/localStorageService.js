@@ -3,17 +3,17 @@ var localStorageService = {
 
 	init: function () {
 		if (typeof localStorage.lib != 'undefined') {
-			liblary.addBooks(JSON.parse(localStorage.lib));
+			library.addBooks(JSON.parse(localStorage.lib));
 
 		} else {
 
-			$.getJSON("js/resource/liblary.json", function (data) {
-				liblary.addBooks(data);
+			$.getJSON("js/resource/library.json", function (data) {
+				library.addBooks(data);
 				var _JSON = JSON.stringify(data);
 				localStorage.lib = _JSON;
 
 			}).fail(function(){
-				console.log("error while loading liblary.json")
+				console.log("error while loading library.json")
 			}); //Koniec getJSON
 
 		}; //koniec else
@@ -22,13 +22,13 @@ var localStorageService = {
 
 	initAuthor: function () {
 		if (typeof localStorage.author != 'undefined') {
-			liblaryAuthor.addAuthors(JSON.parse(localStorage.author));
+			libraryAuthor.addAuthors(JSON.parse(localStorage.author));
 
 		} else {
 
-			$.getJSON("js/resource/liblaryAuthor.json", function (data) {
+			$.getJSON("js/resource/libraryAuthor.json", function (data) {
 
-				liblaryAuthor.addAuthors(data);
+				libraryAuthor.addAuthors(data);
 				var _JSON = JSON.stringify(data);
 				localStorage.author = _JSON;
 
@@ -39,7 +39,7 @@ var localStorageService = {
 	}, //Koniec initAuthor
 
 
-	addLiblarytoLocalStor: function (lib) {
+	addlibrarytoLocalStor: function (lib) {
 
 		var _JSON = JSON.stringify(lib);
 		localStorage.lib = _JSON;
@@ -47,9 +47,9 @@ var localStorageService = {
 	},
 
 
-	addAuthortoLocalStor: function (thisliblaryAuthor) {
+	addAuthortoLocalStor: function (thislibraryAuthor) {
 
-		var _JSON = JSON.stringify(thisliblaryAuthor);
+		var _JSON = JSON.stringify(thislibraryAuthor);
 		localStorage.author = _JSON;
 
 	}
