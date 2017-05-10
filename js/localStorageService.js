@@ -1,57 +1,60 @@
 //TODO: połączyć z localStorageContoler
 var localStorageService = {
 
-	init: function () {
-		if (typeof localStorage.lib != 'undefined') {
-			library.addBooks(JSON.parse(localStorage.lib));
+    init: function () {
+        return new Promise(function (resolve, reject) {
+            if (typeof localStorage.lib != 'undefined') {
+                library.addBooks(JSON.parse(localStorage.lib));
+                resolve();
+            } else {
 
-		} else {
+                $.getJSON("js/resource/library.json", function (data) {
+                    library.addBooks(data);
+                    var _JSON = JSON.stringify(data);
+                    localStorage.lib = _JSON;
+                    resolve();
+                }).fail(function () {
+                    console.log("error while loading library.json")
+                    reject();
+                }); //Koniec getJSON
 
-			$.getJSON("js/resource/library.json", function (data) {
-				library.addBooks(data);
-				var _JSON = JSON.stringify(data);
-				localStorage.lib = _JSON;
+            }; //koniec else
+        }); //koniec Promise
+    }, //Koniec init
 
-			}).fail(function(){
-				console.log("error while loading library.json")
-			}); //Koniec getJSON
+    initAuthor: function () {
+        return new Promise(function (resolve, reject) {
+            if (typeof localStorage.author != 'undefined') {
+                libraryAuthor.addAuthors(JSON.parse(localStorage.author));
+                resolve();
+            } else {
 
-		}; //koniec else
+                $.getJSON("js/resource/libraryAuthor.json", function (data) {
 
-	}, //Koniec init
+                    libraryAuthor.addAuthors(data);
+                    var _JSON = JSON.stringify(data);
+                    localStorage.author = _JSON;
+                    resolve();
+                }); //Koniec getJSON
 
-	initAuthor: function () {
-		if (typeof localStorage.author != 'undefined') {
-			libraryAuthor.addAuthors(JSON.parse(localStorage.author));
-
-		} else {
-
-			$.getJSON("js/resource/libraryAuthor.json", function (data) {
-
-				libraryAuthor.addAuthors(data);
-				var _JSON = JSON.stringify(data);
-				localStorage.author = _JSON;
-
-			}); //Koniec getJSON
-
-		}; //koniec else
-
-	}, //Koniec initAuthor
-
-
-	addlibrarytoLocalStor: function (lib) {
-
-		var _JSON = JSON.stringify(lib);
-		localStorage.lib = _JSON;
-
-	},
+            }; //koniec else
+        }); //koniec Promise
+    }, //Koniec initAuthor
 
 
-	addAuthortoLocalStor: function (thislibraryAuthor) {
+    addlibrarytoLocalStor: function (lib) {
 
-		var _JSON = JSON.stringify(thislibraryAuthor);
-		localStorage.author = _JSON;
+        var _JSON = JSON.stringify(lib);
+        localStorage.lib = _JSON;
 
-	}
+    },
+
+
+    addAuthortoLocalStor: function (thislibraryAuthor) {
+
+        var _JSON = JSON.stringify(thislibraryAuthor);
+        localStorage.author = _JSON;
+
+    }
 
 };

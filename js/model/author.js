@@ -7,7 +7,6 @@ function Author(id,name,surname){
 
 };
 
-
 Author.prototype.getId = function(){
 	return this.id;
 }

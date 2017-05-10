@@ -20,7 +20,7 @@ var libraryControler = {
 
 				});*/
 
-		$("body").on('submit', '#formBook', function () {
+		$("body").on( 'submit', '#formBook', function () {
 			//e.preventDefault();
 			var index = undefined;
 			var title = $(this.title).val();
@@ -31,17 +31,11 @@ var libraryControler = {
 			library.addBook(title, author, year, index);
 			localStorageService.addlibrarytoLocalStor(library.getBooks());
 
-
 			if (index != undefined) {
 				libraryView.clearView();
 				libraryView.showBooks(library.getBooks(), libraryAuthor.getAuthors());
 			}
-
-
-
 		});
-
-
 	},
 	removeBook: function () {
 
@@ -52,9 +46,7 @@ var libraryControler = {
 			localStorageService.addlibrarytoLocalStor(library.getBooks());
 			libraryView.clearView();
 			libraryView.showBooks(library.getBooks(), libraryAuthor.getAuthors());
-
 		});
-
 	},
 
 	showFullBook: function () {
@@ -66,11 +58,7 @@ var libraryControler = {
 				$('.modal ').modal('show');
 				popUpView.showBookInPopUp(library.getBook(number), number);
 				popUpView.showAuthorsInPopUp(libraryAuthor.getAuthors(), library.getBook(number));
-
 			});
-
 		});
 	}
-
-
 };
