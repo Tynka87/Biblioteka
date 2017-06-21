@@ -1,29 +1,26 @@
 <div class="tooltip">
-	<div id="cross"><img src="images/cross.png" alt="X" /></div>
-	<!--       <h2>Książka do edycji</h2>-->
-	<form id="formBook">
-		<fieldset>
-			<legend>Edytuj książke</legend>
-			<ul>
-				<li id="title">
-					<label for="title">Tytuł</label>
-					<input required type="text" id="titleInPopUp" name="title" value="" />
-				</li>
-				<li>
-					<label for="author">Autor</label>
-					<select id="authorlist"  name="author">	
-					
-
-					</select>
-				</li>
-				<li>
-					<label for="year" >Rok wydania</label>
-					<input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
-				</li>
-				<INPUT id="index" type="HIDDEN" NAME="nazwa" VALUE="">
-			</ul>
-			<button type="submit" id="send">Zapisz</button>
-		</fieldset>
-	</form>
+    <div id="cross"><img src="images/cross.png" alt="X" /></div>
+    <!--       <h2>Książka do edycji</h2>-->
+    <form id="formBook">
+        <fieldset>
+            <legend>Edytuj książke</legend>
+            <ul>
+                <li id="title">
+                    <label for="title">Tytuł</label>
+                    <input required type="text" id="titleInPopUp" name="title" value="" />
+                </li>
+                <li>
+                    <label for="author">Autor</label>
+                    <select id="authorlist" name="author">	</select>
+                </li>
+                <li>
+                    <label for="year">Rok wydania</label>
+                    <input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
+                </li>
+                <INPUT id="index" type="HIDDEN" NAME="nazwa" VALUE="" />
+            </ul>
+            <button type="submit" id="send">Zapisz</button>
+        </fieldset>
+    </form>
 
 </div>

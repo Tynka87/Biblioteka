@@ -4,6 +4,7 @@ var authorControler = {
 	init: function () {
 		
 		this.showFullAuthor();
+        this.addNewAuthor();
 
 		$("body").on('submit', '#formAuthor', function () {
 			//e.preventDefault();
@@ -25,17 +26,29 @@ var authorControler = {
 
 	showFullAuthor: function () {
 
-		$("#authors").on('click', '.btn', function () {
-			var number = $(this).val();
+		$("#authors").on('click', '.clickAuthor', function () {
+			let number = $(this).data('id');
 			$('.popUp').load('html/showFullAuthor.html', function () {
 
-				$('.modal ').modal('show');				popUpView.showAuthorInPopUp(libraryAuthor.getAuthorInPopUp(number), number);			
-
+				$('.modal ').modal('show');				
+                popUpView.showAuthorInPopUp(libraryAuthor.getAuthorInPopUp(number), number);	
+         
 			});
 
 		});
 
-	}
+	},
+      addNewAuthor: function () {
+
+        $(".widget-author").on('click', 'a', function () {
+            console.log('przeszlo');
+            $('.popUp').load('html/showFullAuthor.html', function () {
+                console.log('krok2');
+                $('.modal').modal('show');
+
+            });
+        });
+    }
 	
 
 };

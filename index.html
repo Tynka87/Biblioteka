@@ -7,43 +7,42 @@
     <link rel="Shortcut icon" href="images/living-room-books-group.png" />
     <title>Biblioteka</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/slideoutwidget.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 
 </head>
 
 <body>
-    <div class="container-fluid">
-        <header class="row">
-            <div class="col-lg-6">
-                <img src="images/logo.gif">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand" href="#tab1">Biblioteka</a>
             </div>
-        </header>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class=""><a href="#tab1" data-toggle="tab">Spis książek</a></li>
+                    <li><a href="#tab2" data-toggle="tab">Autorzy</a></li>
+                    <li><a href="#tab3" data-toggle="tab">Dodawanie książek</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
 
-    </div>
 
 
-    <!-- Nagłówki -->
-    <!--
-<nav class="navbar navbar-inverse">
-<ul class="nav nav-tabs">
-  <li><a href="#tab1" data-toggle="tab">Zakładka 1</a></li>
-  <li><a href="#tab2" data-toggle="tab">Zakładka 2</a></li>
-  <li><a href="#tab3" data-toggle="tab">Zakładka 3</a></li>
-</ul>
-  </nav> 
--->
-    <!-- Karty -->
-    <!--
-<div class="tab-content">
-  <div class="tab-pane active" id="tab1">Lorem Ipsum...</div>
-  <div class="tab-pane" id="tab2">...jest tekstem...</div>
-  <div class="tab-pane" id="tab3">...stosowanym jako</div>
-</div>
--->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
@@ -54,7 +53,7 @@
                 <a class="navbar-brand" href="#tab1" data-toggle="tab">Biblioteka</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#tab1" data-toggle="tab">Spis książek</a></li>
@@ -62,25 +61,31 @@
                     <li><a href="#tab3" data-toggle="tab">Dodawanie książek</a></li>
                 </ul>
             </div>
-            <!--	  /.navbar-collapse -->
+
         </div>
-        <!-- /.container-fluid -->
+
     </nav>
     <!--------------------KONIEC-------------------------->
 
     <!-- Karty -->
     <div class="container">
         <div class="tab-content">
+
             <div class="tab-pane active" id="tab1">
                 <div class="row">
                     <div class="col-lg-12">
                         <div id="library">
                             <fieldset>
-                                <legend>Spis książek</legend>
-                                <ul>
+                                <legend>
+                                    <h3>Spis książek</h3>
+                                </legend>
+                                <div class="task-items">
+                                    <ul class="d-flex flex-wrap">
 
 
-                                </ul>
+                                    </ul>
+                                </div>
+
                             </fieldset>
                         </div>
                     </div>
@@ -91,11 +96,22 @@
                     <div class="col-lg-12">
                         <div id="authors">
                             <fieldset>
-                                <legend>Autorzy</legend>
-                                <ul>
+                                <legend>
+                                    <h3>Autorzy</h3>
+                                </legend>
+                                <table class="table table-inverse">
+                                    <thead class="thead-default">
+                                        <tr>
 
+                                            <th>Index</th>
+                                            <th>Imię</th>
+                                            <th>Nazwisko</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
 
-                                </ul>
+                                    </tbody>
+                                </table>
                             </fieldset>
                         </div>
                     </div>
@@ -159,7 +175,23 @@
                 </div>
             </div>
         </div>
+        <div class="slideout-widget widget-book">
+            <div class="slideout-widget-handler">
+                <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            </div>
+            <div class="slideout-widget-content">
+                <a>Dodaj nową książke</a>
+            </div>
+        </div>
 
+        <div class="slideout-widget widget-author">
+            <div class="slideout-widget-handler">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </div>
+            <div class="slideout-widget-content">
+                <a href="">Dodaj nowego autora</a>
+            </div>
+        </div>
 
         <div class="popUp"></div>
     </div>

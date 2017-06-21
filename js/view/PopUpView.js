@@ -15,7 +15,8 @@ var popUpView = {
 	
 	showAuthorsInPopUp: function (authors, book) {
 		$('.modal-body #authorlist').append(prepareOptionList(authors));
-		$(".modal-body #authorlist option[value='" + book.getAuthor() + "']").attr("selected", "selected")
+		$(".modal-body #authorlist option[value='" + book.getAuthor() + "']").attr("selected", "selected");
+        
 	},
 	
 	showAuthorInPopUp: function(author,index){		
@@ -26,6 +27,8 @@ var popUpView = {
 		$(".modal-body #index").val(index);	
 		$(".modal-footer #send2").val(index);
 		$(".modal-footer #removeButtonInAuthor").val(index);
+    
 	}
+   
 
 };

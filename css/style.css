@@ -1,53 +1,186 @@
-header{
-	background-image: url(../images/1731a.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding-left: 5%;
+body {
+    margin-top: 8%;
+    font-size: 16px;
 }
 
-li{
-	list-style-type: circle;
-}
-/*#library ul {
-	list-style: none;
-}
-
-#library ul p {
-	margin-left: 25px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Poppins;
 }
 
-#library h4.open {
-	background: url(../images/open.png) no-repeat 0 12px;
-	padding: 10px 0 0 25px;
-	cursor: pointer;
+p {
+    font-family: Roboto;
 }
 
-h4.close {
-	background: url(../images/close.png) no-repeat 0 12px;
-	padding: 10px 0 0 25px;
-	cursor: pointer;
+.navbar.navbar-default {
+    background: #3c5b9b;
+    border: 0;
+    font-family: Poppins;
 }
 
-.removeBook {}*/
-
-/*.tooltip {
-	width: 25%;
-	padding: 5px;
-	background-color: white;
-	border: 3px solid blue;
-	border-radius: 5px;
-	position: fixed;
-	z-index: 2;
-	top: 20%;
-	left: 30%;
-}*/
-/*.tooltip h2 {
-	text-align: center;
-	
+.navbar .navbar-header .navbar-brand {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
 }
 
-#cross {
-	cursor: pointer;
-	text-align: right;
-		background: url(../images/cross.png) no-repeat 0 12px;
-}*/
+.navbar .navbar-nav>li>a {
+    color: #fff;
+}
+
+
+/*od tad*/
+
+.task-items ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0;
+}
+
+.task-items ul li {
+    /*  display: inline-block;*/
+    position: relative;
+    font-size: 12px;
+     font-family: Poppins;
+    padding: 15px 0px;
+    margin-top: 10px;
+    /*    width: 20%;
+            height: 6rem;*/
+    text-align: left;
+}
+
+.task-items ul:hover {
+    background-color: rgba(#fff, .1);
+}
+
+.task-items ul li a {
+    padding: 15px;
+    padding-left: 30%;
+    text-decoration: none;
+   
+    color: #484848;
+}
+
+.task-items ul li a:hover {
+ 
+    color: #1c1b1b;
+}
+
+.task-items .item-representation {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    background-color:  #efefef;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    overflow: hidden;
+}
+
+.task-items .item-representation span {
+    display: block;
+}
+
+.task-items .item-representation span:before {
+    content: url(../images/public-museum-sign1.gif);
+    display: block;
+    position: absolute;
+    bottom: -0.4rem;
+    left: -1.4rem;
+/*
+    font-family: FontAwesome;
+    color: rgba(#000, .1);
+*/
+    font-size: 10rem;
+}
+
+.clickAuthor {
+    cursor: pointer;
+}
+
+
+/*.task-items {
+ul {
+list-style: none;
+padding: 0;
+font-size: 0;
+
+li {
+display: inline-block;
+position: relative;
+font-size: 1rem;
+padding: 1rem 1rem;
+width: 20%;
+height: 6rem;
+text-align: center;
+
+&:hover {
+background-color: rgba(#fff, .1);
+
+.item-delete {
+display: block;
+}
+}
+
+.item-delete {
+position: absolute;*/
+
+
+/*
+top: 0.4rem;
+right: 0.4rem;
+cursor: pointer;
+display: none;
+
+i {
+display: block;
+font-size: 1.6rem;
+color: #9fa7d9;
+line-height: 1.5rem;
+background-color: #E8EAF6;
+border-radius: 50%;
+padding: .1rem .19rem;
+}
+
+i:hover {
+color: #d9534f;
+}
+}
+
+.item-representation {
+display: block;
+position: relative;
+width: 100%;
+height: 100%;
+line-height: 100%;
+background-color: #E8EAF6;
+cursor: pointer;
+border-top-right-radius: 1rem;
+border-bottom-left-radius: 1rem;
+overflow: hidden;
+
+span {
+display: block;
+}
+
+&::before {
+content: "\f013";
+display: block;
+position: absolute;
+bottom: -1.4rem;
+left: -1.8rem;
+font-family: FontAwesome;
+color: rgba(#000, .1);
+font-size: 10rem;
+}
+}
+}
+}
+}
+*/
