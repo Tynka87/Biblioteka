@@ -28,6 +28,8 @@ var popUpView = {
 		$(".modal-footer #send2").val(index);
 		$(".modal-footer #removeButtonInAuthor").val(index);
     
+        
+        
 	}
    
 

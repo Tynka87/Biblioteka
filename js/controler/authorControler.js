@@ -5,6 +5,7 @@ var authorControler = {
 		
 		this.showFullAuthor();
         this.addNewAuthor();
+        this.removeAuthor();
 
 		$("body").on('submit', '#formAuthor', function () {
 			//e.preventDefault();
@@ -23,6 +24,14 @@ var authorControler = {
 		});
 
 	},
+      removeAuthor: function () {
+
+        $(".popUp").on('click', '#removeButtonInAuthor', function () {
+              var number = $(this).val();
+            $('.modal ').modal('hide');
+           console.log('działa'+number);
+        });
+    },
 
 	showFullAuthor: function () {
 
@@ -42,7 +51,7 @@ var authorControler = {
 
         $(".widget-author").on('click', 'a', function () {
             console.log('przeszlo');
-            $('.popUp').load('html/showFullAuthor.html', function () {
+            $('.popUp').load('html/showFullBook.html', function () {
                 console.log('krok2');
                 $('.modal').modal('show');
 

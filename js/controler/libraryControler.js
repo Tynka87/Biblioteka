@@ -40,9 +40,8 @@ var libraryControler = {
     },
     removeBook: function () {
 
-        $(".popUp").on('click', '#removeButton', function () {
-            var number = $(this).val();
-            $('.modal ').modal('hide');
+        $("#library").on('click', '.item-delete', function () {
+            let number = $(this).data('id');
             library.removeBook(number);
             localStorageService.addlibrarytoLocalStor(library.getBooks());
             libraryView.clearView();
@@ -56,20 +55,23 @@ var libraryControler = {
             let number = $(this).data('id');
 
             $('.popUp').load('html/showFullBook.html', function () {
-
+                $('#gridSystemModalLabel').append('Edytuj książke ');
                 $('.modal').modal('show');
                 popUpView.showBookInPopUp(library.getBook(number), number);
                 popUpView.showAuthorsInPopUp(libraryAuthor.getAuthors(), library.getBook(number));
+                
+                
             });
         });
     },
     addNewBook: function () {
 
         $(".widget-book").on('click', 'a', function () {
-            console.log('przeszlo');
+         
             $('.popUp').load('html/showFullBook.html', function () {
-                console.log('krok2');
+                $('#gridSystemModalLabel').append('Dodaj nową książke ');
                 $('.modal').modal('show');
+                
 
             });
         });
