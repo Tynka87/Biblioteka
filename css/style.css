@@ -33,7 +33,7 @@ p {
 }
 
 
-/*od tad*/
+
 
 .task-items ul {
     list-style: none;
@@ -42,26 +42,28 @@ p {
 }
 
 .task-items ul li {
-    /*  display: inline-block;*/
+/*    display: inline-block;*/
     position: relative;
-    font-size: 12px;
+    font-size: 14px;
     font-family: Poppins;
-    padding: 15px 0px;
-    margin-top: 10px;
-    /*    width: 20%;
-            height: 6rem;*/
+    padding: 15px;
+
     text-align: left;
+    
 }
 
-.task-items ul:hover {
-    background-color: rgba(#fff, .1);
+.task-items li:hover {
+    background-color: #fff;
 }
 
 .task-items ul li a {
-    padding: 15px;
+    padding: 20px;
+    margin: 10px;
     padding-left: 30%;
+/*    padding-bottom: 10%;*/
     text-decoration: none;
     color: #484848;
+    line-height: 2;
 }
 
 .task-items ul li a:hover {
@@ -83,6 +85,7 @@ p {
 
 .task-items .item-representation span {
     display: block;
+    line-height: 160%;
 }
 
 .task-items .item-representation span:before {
@@ -91,6 +94,7 @@ p {
     position: absolute;
     bottom: -0.4rem;
     left: -1.4rem;
+    
     /*
     font-family: FontAwesome;
     color: rgba(#000, .1);
@@ -110,22 +114,32 @@ p {
     top: 5%;
     right: -2%;
     cursor: pointer;
-/*    display: none;*/
+    display: none;
 }
 
-.align-self-stretch:hover .item-delete {
+.align-self-stretch:hover .item-delete, .align-self-stretch:hover button.edit {
     display: block;
+    visibility: visible;
 }
 
 .item-delete i {
     display: block;
-    font-size: 22px;
+    font-size: 20px;
     color: #3c5b9b;
+    border-radius: 50%;
+}
+
+button.edit{
+      visibility:hidden
+    /* position: absolute;*/
+   /* margin-top:5px;*/
+
+}
 /*
     line-height: 1.5rem;
     background-color: #E8EAF6;
 */
-    border-radius: 50%;
+    
 /*
     padding: .1rem .19rem;
 }

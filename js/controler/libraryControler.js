@@ -51,7 +51,7 @@ var libraryControler = {
 
     showFullBook: function () {
 
-        $("#library").on('click', '.item-representation', function () {
+        $("#library").on('click', 'button.edit', function () {
             let number = $(this).data('id');
 
             $('.popUp').load('html/showFullBook.html', function () {
