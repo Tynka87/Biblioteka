@@ -32,7 +32,6 @@ var library = {
 	},
 	
 	getBook: function (number) {
-		console.log(this.library[number].getTitle());
 		return this.library[number];
 	},
 };

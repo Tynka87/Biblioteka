@@ -1,46 +1,36 @@
 <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="gridSystemModalLabel">				
-				</h4>
-			</div>
-			<div class="modal-body">
-				<form id="formBook">
-					<div class="row">
-						<div class="col-md-12" id="book">
-							<ul>
-								<div class="col-md-6">
-									<li id="title">
-										<label for="title">Tytuł</label>
-										<input required type="text" id="titleInPopUp" name="title" value="" />
-									</li>
-									<li>
-										<label for="author">Autor</label>
-										<select id="authorlist" name="author">
-										</select>
-									</li>
-								</div>
-								<div class="col-md-6">
-									<li>
-										<label for="year">Rok wydania</label>
-										<input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
-									</li>
-									<INPUT id="index" type="HIDDEN" NAME="nazwa" VALUE="">
-									</INPUT>
-								</div>
-							</ul>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" id="removeButton">Usuń książke</button>
-						<button type="submit" class="btn btn-primary" id="send">Zapisz zmiany</button>
-					</div>
-				</form>
-			</div>
-			<!-- /.modal-content -->
-		</div>
-		<!-- /.modal-dialog -->
-	</div>
-	<!-- /.modal -->
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                <h4 class="modal-title" id="gridSystemModalLabel">
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" id="formBook">
+                    <div class="form-group">
+                        <label for="title">Tytuł</label>
+                        <input type="text" class="form-control" id="titleInPopUp" name="title" value="" placeholder="Podaj tytuł książki" />
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Autor</label>
+                        <select type="text" class="form-control" id="authorlist" name="author" placeholder="Podaj autora"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Rok wydania</label>
+                        <input type="number" class="form-control" id="year" min="1900" max="2099" step="1" value="2017" />
+                    </div>
+                    <div class="form-group">
+                        <INPUT id="index" type="HIDDEN" NAME="nazwa" VALUE=""></INPUT>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="removeButton">Usuń książke</button>
+                        <button type="submit" class="btn btn-primary" id="send">Zapisz zmiany</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

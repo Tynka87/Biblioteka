@@ -40,8 +40,10 @@ var libraryControler = {
     },
     removeBook: function () {
 
-        $("#library").on('click', '.item-delete', function () {
-            let number = $(this).data('id');
+        $(".popUp").on('click', '#removeButton', function () {
+            console.log('hahaha');
+              var number = $(this).val();
+            $('.modal').modal('hide');
             library.removeBook(number);
             localStorageService.addlibrarytoLocalStor(library.getBooks());
             libraryView.clearView();
@@ -51,7 +53,7 @@ var libraryControler = {
 
     showFullBook: function () {
 
-        $("#library").on('click', 'button.edit', function () {
+        $("#library").on('click', '.item-delete', function () {
             let number = $(this).data('id');
 
             $('.popUp').load('html/showFullBook.html', function () {
@@ -59,19 +61,19 @@ var libraryControler = {
                 $('.modal').modal('show');
                 popUpView.showBookInPopUp(library.getBook(number), number);
                 popUpView.showAuthorsInPopUp(libraryAuthor.getAuthors(), library.getBook(number));
-                
-                
+
+
             });
         });
     },
     addNewBook: function () {
 
         $(".widget-book").on('click', 'a', function () {
-         
+
             $('.popUp').load('html/showFullBook.html', function () {
                 $('#gridSystemModalLabel').append('Dodaj nową książke ');
                 $('.modal').modal('show');
-                
+
 
             });
         });

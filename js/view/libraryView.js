@@ -16,6 +16,7 @@ var libraryView = {
                                  .replace("{{name}}", authors[nr].getName())
                                  .replace("{{surname}}", authors[nr].getSurname())
                                  .replace("{{year}}", books[i].getYear())
+                                 .replace("{{i}}", i)
                                  .replace("{{i}}", i);
                
                 $('#library fieldset ul').append(newTile);

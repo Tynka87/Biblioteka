@@ -36,7 +36,7 @@ var authorControler = {
 	showFullAuthor: function () {
 
 		$("#authors").on('click', '.clickAuthor', function () {
-			let number = $(this).data('id');
+			   let number = $(this).data('id');
 			$('.popUp').load('html/showFullAuthor.html', function () {
 
 				$('.modal ').modal('show');				
@@ -49,10 +49,8 @@ var authorControler = {
 	},
       addNewAuthor: function () {
 
-        $(".widget-author").on('click', 'a', function () {
-            console.log('przeszlo');
-            $('.popUp').load('html/showFullBook.html', function () {
-                console.log('krok2');
+        $(".widget-author").on('click', 'a', function () {       
+            $('.popUp').load('html/showFullAuthor.html', function () {              
                 $('.modal').modal('show');
 
             });

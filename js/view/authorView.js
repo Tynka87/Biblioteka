@@ -14,6 +14,7 @@ var authorView = {
             for (var i = 0; i < authors.length; i++) {
               let newTable = table;
                 newTable = newTable.replace("{{i}}", i)
+                                 .replace("{{i}}", i)
                                  .replace("{{id}}", authors[i].getId())
                                  .replace("{{name}}", authors[i].getName())
                                  .replace("{{surname}}", authors[i].getSurname());
