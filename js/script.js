@@ -1,8 +1,7 @@
  $(function () {
 
    localStorageService.init().then(function () {
-     localStorageService.initAuthor().then(function () {
-       libraryView.showAuthorsInBook(libraryAuthor.getAuthors());
+     localStorageService.initAuthor().then(function () {   
        libraryView.showBooks(library.getBooks(), libraryAuthor.getAuthors());
        authorView.showAuthors(libraryAuthor.getAuthors());
        libraryControler.init();

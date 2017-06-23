@@ -5,8 +5,8 @@ var library = {
 	addBook: function (title, author, year, index) {
 		var book = new Book(title, author, year);
 
-		if (index == undefined) {
-			this.library.push(book);
+		if (index === undefined) {
+           	this.library.push(book);
 		} else {
 			this.library.splice(index, 1, book);
 		};

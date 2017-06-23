@@ -33,7 +33,7 @@ var libraryView = {
 
     showAuthorsInBook: function (authors) {
 
-        $('#authorlist').append(prepareOptionList(authors));
+        $('.form-group #authorlist').append(prepareOptionList(authors));
     },
 
 };

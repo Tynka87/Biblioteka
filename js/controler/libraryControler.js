@@ -7,26 +7,12 @@ var libraryControler = {
         this.addNewBook();
 
 
-        /*		$("#formBook").submit(function (e) {
-        			e.preventDefault();
-        			var title = $("#title").val();
-        			var author = $("#authorlist option:selected").val();
-        			var year = $("#year").val();
-
-
-
-        			library.addBook(title, author, year);			localStorageService.addlibrarytoLocalStor(library.getBooks());		
-        			libraryView.clearView();			libraryView.showBooks(library.getBooks(),libraryAuthor.getAuthors()); 
-
-
-        		});*/
-
         $("body").on('submit', '#formBook', function () {
             //e.preventDefault();
-            var index = undefined;
-            var title = $(this.title).val();
-            var author = $(this.authorlist).val();
-            var year = $(this.year).val();
+            let index;
+            let title = $(this.title).val();
+            let author = $(this.authorlist).val();
+            let year = $(this.year).val();
             index = $(this.index).val();
 
             library.addBook(title, author, year, index);
@@ -41,8 +27,7 @@ var libraryControler = {
     removeBook: function () {
 
         $(".popUp").on('click', '#removeButton', function () {
-            console.log('hahaha');
-              var number = $(this).val();
+            let number = $(this).val();
             $('.modal').modal('hide');
             library.removeBook(number);
             localStorageService.addlibrarytoLocalStor(library.getBooks());
@@ -71,7 +56,11 @@ var libraryControler = {
         $(".widget-book").on('click', 'a', function () {
 
             $('.popUp').load('html/showFullBook.html', function () {
+                $('.form-group #index').remove();
                 $('#gridSystemModalLabel').append('Dodaj nową książke ');
+
+                libraryView.showAuthorsInBook(libraryAuthor.getAuthors());
+
                 $('.modal').modal('show');
 
 
