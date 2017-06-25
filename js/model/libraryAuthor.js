@@ -14,7 +14,6 @@ var libraryAuthor = {
     },
 
     addAuthor2: function (_json) {
-
         var author = new Author(_json.id, _json.name, _json.surname);
         this.libraryAuthor.push(author);
     },
@@ -26,7 +25,6 @@ var libraryAuthor = {
     },
 
     getAuthors: function () {
-        //console.log( this.libraryAuthor);
         return this.libraryAuthor;
     },
 
@@ -46,45 +44,13 @@ var libraryAuthor = {
         }
         return author;
     },
+    
+    removeAuthor: function (number) {
+        this.libraryAuthor.splice(number, 1);
+    },
 
     getAuthorInPopUp: function (number) {
         return this.libraryAuthor[number];
-    },
-
-    getAuthorInBookWithId: function (id, authors) {
-        for (var i = 0; i < authors.length; i++) {
-            if (id === authors[i].getId()) {
-                return i;
-            }
-            console.log('moje id autora: ' + id);
-            console.log('authors[i].getId(): ' + authors[i].getId());
-        };
     }
-
-    /*   generatorId: function () {
-
-           this.length = 8;
-           this.timestamp = +new Date;z
-           function _getRandomInt(min, max) {
-               return Math.floor(Math.random() * (max - min + 1)) + min;
-           }
-
-           var ts = this.timestamp.toString();
-           var parts = ts.split("").reverse();
-           var id = "";
-
-           for (var i = 0; i < this.length; ++i) {
-               var index = _getRandomInt(0, parts.length - 1);
-               id += parts[index];
-           }
-
-           return id;
-       }*/
-    /* 
-    {
-	   
-		return this.libraryAuthor[this.libraryAuthor.length-1].getId() + 1;
-		
-	}*/
-
+    
 };

@@ -2,7 +2,7 @@ var authorView = {
 
 	clearViewAuthor: function () {
 		$('#authorlist option').remove();
-		$('#library fieldset ul .col-md-4').remove();		
+		$('#authors fieldset .table tbody tr').remove();		
 	},
 
 
@@ -20,7 +20,7 @@ var authorView = {
                                  .replace("{{surname}}", authors[i].getSurname());
                                  
               
-                $('#authors fieldset .table thead').append(newTable);
+                $('#authors fieldset .table tbody').append(newTable);
             }
 
         },'text');

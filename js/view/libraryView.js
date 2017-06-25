@@ -11,8 +11,6 @@ var libraryView = {
 
             for (var i = 0; i < books.length; i++) {
 
-                nr = libraryAuthor.getAuthorInBookWithId(books[i].getAuthor(), libraryAuthor.getAuthors());
-                console.log(JSON.stringify(books[i]));
                 a = libraryAuthor.getAuthor(parseInt(books[i].getAuthor()));
                 console.log(a);
 //                console.log('nr: ' + nr);

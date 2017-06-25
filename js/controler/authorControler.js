@@ -20,17 +20,23 @@ var authorControler = {
             localStorageService.addAuthortoLocalStor(libraryAuthor.getAuthors());
             authorView.clearViewAuthor();
             libraryView.showAuthorsInBook(libraryAuthor.getAuthors());
-
-
         });
 
     },
     removeAuthor: function () {
 
         $(".popUp").on('click', '#removeButtonInAuthor', function () {
-            var number = $(this).val();
-            $('.modal ').modal('hide');
-            console.log('działa' + number);
+            let number = $(this).val();
+            let authorId = libraryAuthor.getAuthors()[number].getId();
+            if (library.isBookWithAuthor(authorId)) {
+                console.log('jest książka');
+            } else {
+                $('.modal').modal('hide');
+                libraryAuthor.removeAuthor(number);
+                localStorageService.addAuthortoLocalStor(libraryAuthor.getAuthors());
+                authorView.clearViewAuthor();
+                authorView.showAuthors(libraryAuthor.getAuthors());
+            }
         });
     },
 
@@ -39,15 +45,12 @@ var authorControler = {
         $("#authors").on('click', '.clickAuthor', function () {
             let number = $(this).data('id');
             $('.popUp').load('html/showFullAuthor.html', function () {
-
                 $('.modal ').modal('show');
                 popUpView.showAuthorInPopUp(libraryAuthor.getAuthorInPopUp(number), number);
-
             });
-
         });
-
     },
+
     addNewAuthor: function () {
 
         $(".widget-author").on('click', 'a', function () {
@@ -59,6 +62,4 @@ var authorControler = {
             });
         });
     }
-
-
 };
