@@ -10,7 +10,7 @@ var authorControler = {
         $("body").on('submit', '#formAuthor', function () {
             //e.preventDefault();
             var index;
-            var id = $(this.id).val();
+            var id = parseInt($(this.id).val());
             var name = $(this.name).val();
             var surname = $(this.surname).val();
             index = $(this.index).val();

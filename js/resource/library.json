@@ -1,25 +1,37 @@
 [{
  "title" : "Pan Tadeusz",
- "author" : 1,
+ "author" : 11111111,
  "year" : 1987
 },{
  "title" : "jQuery",
- "author" : 2,
+ "author" : 11221122,
  "year" : 2011
 },{
  "title" : "Diuna",
- "author" : 3,
+ "author" : 11111111,
  "year" : 2004
 },{
  "title" : "Dziady",
- "author" : 1,
+ "author" : 11111111,
  "year" : 1987
 },{
  "title" : "Sonety krymskie",
- "author" : 1,
+ "author" : 11111111,
  "year" : 2011
 },{
  "title" : "Ojciec chrzestny",
  "author" : 4,
+ "year" : 2004
+},{
+ "title" : "Metro 2033",
+ "author" : 45957269,
+ "year" : 2004
+},{
+ "title" : "Buszujący w zborzu",
+ "author" : 75284409,
+ "year" : 2004
+},{
+ "title" : "MammaMia",
+ "author" : 57842640,
  "year" : 2004
 }]

@@ -31,7 +31,20 @@ var libraryAuthor = {
     },
 
     getAuthor: function (id) {
-        return a;
+        console.log(this.libraryAuthor.length);
+        let author;
+        this.libraryAuthor.forEach((a) => {
+            console.log("autor id " + a.getId() + ", typ: " + typeof a.getId());
+            console.log("szukane id " + id + ", typ: " + typeof id);
+           if (a.getId() === id) {
+               console.log("znalazl a:" + JSON.stringify(a));
+               author = a;
+           } 
+        });
+        if (!author) {
+            return new Author(id, "nie", "ma");
+        }
+        return author;
     },
 
     getAuthorInPopUp: function (number) {
@@ -40,18 +53,18 @@ var libraryAuthor = {
 
     getAuthorInBookWithId: function (id, authors) {
         for (var i = 0; i < authors.length; i++) {
-            if (id == authors[i].getId()) {
+            if (id === authors[i].getId()) {
                 return i;
-
             }
+            console.log('moje id autora: ' + id);
+            console.log('authors[i].getId(): ' + authors[i].getId());
         };
     }
 
     /*   generatorId: function () {
 
            this.length = 8;
-           this.timestamp = +new Date;
-
+           this.timestamp = +new Date;z
            function _getRandomInt(min, max) {
                return Math.floor(Math.random() * (max - min + 1)) + min;
            }

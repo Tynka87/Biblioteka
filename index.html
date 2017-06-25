@@ -31,7 +31,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="#tab1" data-toggle="tab">Spis książek</a></li>
                     <li><a href="#tab2" data-toggle="tab">Autorzy</a></li>
-                    <li><a href="#tab3" data-toggle="tab">Dodawanie książek</a></li>
+                  
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -91,63 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane" id="tab3">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <form id="formBook" class="form-horizontal">
-                            <fieldset>
-                                <legend>Dodaj książke</legend>
-                                <ul>
-                                    <li>
-                                        <label for="title">Tytuł</label>
-                                        <input required type="text" name="title" id="title" />
-                                    </li>
-                                    <li>
-                                        <label for="author">Autor</label>
-                                        <select id="authorlist" name="author">
-									</select>
-
-                                    </li>
-                                    <li>
-                                        <label for="year">Rok wydania</label>
-
-                                        <input id="year" type="number" min="1900" max="2099" step="1" value="2017" required/>
-                                    </li>
-                                </ul>
-
-                                <button type="submit" id="send">Zapisz</button>
-
-                            </fieldset>
-                        </form>
-                    </div>
-
-
-                    <div class="col-lg-4">
-                        <form id="formAuthor">
-                            <fieldset>
-                                <legend>Dodaj autora</legend>
-                                <ul>
-                                    <!--<li>
-									<label for="id">Id</label>
-									<input required type="number" id="id" name="id" />
-								</li>-->
-                                    <li>
-                                        <label for="name">Imię</label>
-                                        <input required type="text" id="name" name="name" />
-                                    </li>
-                                    <li>
-                                        <label for="surname">Nazwisko</label>
-                                        <input required type="text" id="surname" name="surname" />
-                                    </li>
-                                </ul>
-
-                                <button type="submit" id="send2">Zapisz</button>
-
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
+  
         </div>
         <div class="slideout-widget widget-book">
             <div class="slideout-widget-handler">
