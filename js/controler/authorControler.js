@@ -6,6 +6,7 @@ var authorControler = {
         this.showFullAuthor();
         this.addNewAuthor();
         this.removeAuthor();
+        this.searchAuthors();
 
         $("body").on('submit', '#formAuthor', function () {
             //e.preventDefault();
@@ -62,6 +63,26 @@ var authorControler = {
                 $('#id').val(generatorId());
 
             });
+        });
+    },
+    searchAuthors: function () {
+        $(document).on('submit', '#searchAuthor', function (e) {
+            e.preventDefault()
+            let searchAuthor = $(this.searchAuthor).val();
+            
+            let authorTable = libraryAuthor.getAuthorInTable(searchAuthor);
+            let authorsSet = libraryAuthor.searchAuthors(authorTable);
+            console.log(authorsSet);
+            authorView.clearViewAuthor();
+            authorView.showAuthors(authorsSet);
+            
+            
+//            let books = library.searchBooks(search);
+//
+//            libraryView.clearView();
+//            libraryView.showBooks(books, libraryAuthor.getAuthors());
+
+
         });
     }
 };
