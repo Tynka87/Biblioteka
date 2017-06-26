@@ -5,13 +5,17 @@ var libraryControler = {
         this.showFullBook();
         this.removeBook();
         this.addNewBook();
+        this.searchBooks
+        
+        
+        ();
 
 
         $("body").on('submit', '#formBook', function () {
             //e.preventDefault();
             let index;
             let title = $(this.title).val();
-            let author =parseInt($(this.authorlist).val());
+            let author = parseInt($(this.authorlist).val());
             let year = $(this.year).val();
             index = $(this.index).val();
 
@@ -54,7 +58,6 @@ var libraryControler = {
     addNewBook: function () {
 
         $(".widget-book").on('click', 'a', function () {
-
             $('.popUp').load('html/showFullBook.html', function () {
                 $('.form-group #index').remove();
                 $('#gridSystemModalLabel').append('Dodaj nową książke ');
@@ -65,5 +68,17 @@ var libraryControler = {
 
             });
         });
+    },
+    searchBooks: function(){
+         $(document).on('submit', '#search', function(e){
+            e.preventDefault()
+            let search = $(this.search).val();
+            let books = library.searchBooks(search);
+             
+             libraryView.clearView();
+              libraryView.showBooks(books, libraryAuthor.getAuthors());
+             
+             
+         });
     }
 };

@@ -40,5 +40,12 @@ var library = {
             book.getAuthor() === id
         );
         return book ? true : false;
+    },
+
+    searchBooks: function (search) {
+        let books = this.library.filter((book) =>
+            book.getTitle().toLowerCase().includes(search.toLowerCase())
+        );
+        return books;
     }
 };
