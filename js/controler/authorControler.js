@@ -8,8 +8,8 @@ var authorControler = {
         this.removeAuthor();
         this.searchAuthors();
 
-        $("body").on('submit', '#formAuthor', function () {
-            //e.preventDefault();
+        $("body").on('submit', '#formAuthor', function (e) {
+            e.preventDefault();
             var index;
             var id = parseInt($(this.id).val());
             var name = $(this.name).val();
@@ -21,12 +21,15 @@ var authorControler = {
             localStorageService.addAuthortoLocalStor(libraryAuthor.getAuthors());
             authorView.clearViewAuthor();
             libraryView.showAuthorsInBook(libraryAuthor.getAuthors());
+            authorView.showAuthors(libraryAuthor.getAuthors());
+            $('.modal').modal('hide');
         });
 
     },
     removeAuthor: function () {
 
-        $(".popUp").on('click', '#removeButtonInAuthor', function () {
+        $(".popUp").on('click', '#removeButtonInAuthor', function (e) {
+            e.preventDefault();
             let number = $(this).val();
             let authorId = libraryAuthor.getAuthors()[number].getId();
             if (library.isBookWithAuthor(authorId)) {
@@ -44,7 +47,8 @@ var authorControler = {
 
     showFullAuthor: function () {
 
-        $("#authors").on('click', '.clickAuthor', function () {
+        $("#authors").on('click', '.clickAuthor', function (e) {
+            e.preventDefault();
             let number = $(this).data('id');
             $('.popUp').load('html/showFullAuthor.html', function () {
                 $('.modal ').modal('show');

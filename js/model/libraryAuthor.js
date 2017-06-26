@@ -59,6 +59,7 @@ var libraryAuthor = {
     },
     searchAuthors: function (search) {
         var authorsSet = new Set();
+        var authorsSet2 = new Set();
         let newArrayAuthors;
         search.forEach((item) => {
 
@@ -72,8 +73,25 @@ var libraryAuthor = {
                     authorsSet.add(author);
                 }
             });
+            newArrayAuthors = Array.from(authorsSet);
+
         });
-        return newArrayAuthors = Array.from(authorsSet);
+
+//        if (authorsSet.size >= 2) {
+//                console.log('weszło stara '+ this.libraryAuthor);
+//            console.log('weszło '+ newArrayAuthors );
+//            search.forEach((item) => {
+//                newArrayAuthors.forEach((author) => {
+//                    if (author.getSurname().toLowerCase().includes(item.toLowerCase())) {
+//                        authorsSet2.add(author);
+//                    }
+//                });
+//                
+//               newArrayAuthors = Array.from(authorsSet2);
+//            });
+//        }
+
+        return newArrayAuthors;
     }
 
 };
