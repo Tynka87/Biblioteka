@@ -11,7 +11,7 @@ var libraryControler = {
             //e.preventDefault();
             let index;
             let title = $(this.title).val();
-            let author = $(this.authorlist).val();
+            let author =parseInt($(this.authorlist).val());
             let year = $(this.year).val();
             index = $(this.index).val();
 
