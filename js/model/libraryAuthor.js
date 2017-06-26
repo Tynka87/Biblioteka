@@ -61,35 +61,54 @@ var libraryAuthor = {
         var authorsSet = new Set();
         var authorsSet2 = new Set();
         let newArrayAuthors;
-        search.forEach((item) => {
+        if (search.length === 1) {
+            search.forEach((item) => {
 
-            this.libraryAuthor.forEach((author) => {
-                if (author.getName().toLowerCase().includes(item.toLowerCase())) {
-                    authorsSet.add(author);
-                }
+                this.libraryAuthor.forEach((author) => {
+                    if (author.getName().toLowerCase().includes(item.toLowerCase())) {
+                        authorsSet.add(author);
+                    }
+                });
+                this.libraryAuthor.forEach((author) => {
+                    if (author.getSurname().toLowerCase().includes(item.toLowerCase())) {
+                        authorsSet.add(author);
+                    }
+                });
+                newArrayAuthors = Array.from(authorsSet);
+
             });
-            this.libraryAuthor.forEach((author) => {
-                if (author.getSurname().toLowerCase().includes(item.toLowerCase())) {
-                    authorsSet.add(author);
-                }
+        } else {
+            search.forEach((item) => {
+
+                this.libraryAuthor.forEach((author) => {
+                    if (author.getName().toLowerCase().includes(item.toLowerCase())) {
+                        search.forEach((item) => {
+                            if (author.getSurname().toLowerCase().includes(item.toLowerCase())) {
+                                authorsSet.add(author);
+                            }
+                        })
+                    }
+
+                });
             });
+            if(authorsSet.size===0){
+                  search.forEach((item) => {
+
+                this.libraryAuthor.forEach((author) => {
+                    if (author.getSurname().toLowerCase().includes(item.toLowerCase())) {
+                        search.forEach((item) => {
+                            if (author.getName().toLowerCase().includes(item.toLowerCase())) {
+                                authorsSet.add(author);
+                            }
+                        })
+                    }
+
+                });
+            });
+                
+            }
             newArrayAuthors = Array.from(authorsSet);
-
-        });
-
-//        if (authorsSet.size >= 2) {
-//                console.log('weszło stara '+ this.libraryAuthor);
-//            console.log('weszło '+ newArrayAuthors );
-//            search.forEach((item) => {
-//                newArrayAuthors.forEach((author) => {
-//                    if (author.getSurname().toLowerCase().includes(item.toLowerCase())) {
-//                        authorsSet2.add(author);
-//                    }
-//                });
-//                
-//               newArrayAuthors = Array.from(authorsSet2);
-//            });
-//        }
+        }
 
         return newArrayAuthors;
     }
