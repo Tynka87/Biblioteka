@@ -29,6 +29,7 @@ var authorControler = {
             let number = $(this).val();
             let authorId = libraryAuthor.getAuthors()[number].getId();
             if (library.isBookWithAuthor(authorId)) {
+                $(".alert").show();
                 console.log('jest książka');
             } else {
                 $('.modal').modal('hide');
@@ -56,6 +57,7 @@ var authorControler = {
         $(".widget-author").on('click', 'a', function () {
             $('.popUp').load('html/showFullAuthor.html', function () {
                 $('.form-group #index').remove();
+                $('.modal-footer .btn-default').remove();
                 $('.modal').modal('show');
                 $('#id').val(generatorId());
 

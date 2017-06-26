@@ -58,9 +58,8 @@ var libraryControler = {
             $('.popUp').load('html/showFullBook.html', function () {
                 $('.form-group #index').remove();
                 $('#gridSystemModalLabel').append('Dodaj nową książke ');
-
                 libraryView.showAuthorsInBook(libraryAuthor.getAuthors());
-
+                $('.modal-footer .btn-default').remove();
                 $('.modal').modal('show');
 
 
