@@ -91,21 +91,21 @@ var libraryAuthor = {
 
                 });
             });
-            if(authorsSet.size===0){
-                  search.forEach((item) => {
+            if (authorsSet.size === 0) {
+                search.forEach((item) => {
 
-                this.libraryAuthor.forEach((author) => {
-                    if (author.getSurname().toLowerCase().includes(item.toLowerCase())) {
-                        search.forEach((item) => {
-                            if (author.getName().toLowerCase().includes(item.toLowerCase())) {
-                                authorsSet.add(author);
-                            }
-                        })
-                    }
+                    this.libraryAuthor.forEach((author) => {
+                        if (author.getSurname().toLowerCase().includes(item.toLowerCase())) {
+                            search.forEach((item) => {
+                                if (author.getName().toLowerCase().includes(item.toLowerCase())) {
+                                    authorsSet.add(author);
+                                }
+                            })
+                        }
 
+                    });
                 });
-            });
-                
+
             }
             newArrayAuthors = Array.from(authorsSet);
         }

@@ -42,10 +42,29 @@ var library = {
         return book ? true : false;
     },
 
+    isBooksWithAuthor: function (id) {
+        let book = this.library.filter((book) =>
+            book.getAuthor() === id
+        );
+        return book;
+    },
+
     searchBooks: function (search) {
         let books = this.library.filter((book) =>
             book.getTitle().toLowerCase().includes(search.toLowerCase())
         );
+        if (books.length === 0) {
+            let authorTabl = libraryAuthor.getAuthorInTable(search);
+            let newArrayAuthors = libraryAuthor.searchAuthors(authorTabl);
+
+            newArrayAuthors.forEach((author) => {
+                let id = author.getId();
+                books = books.concat(this.isBooksWithAuthor(id));
+            });
+        }
+
+
         return books;
+
     }
 };

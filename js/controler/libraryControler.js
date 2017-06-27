@@ -73,12 +73,10 @@ var libraryControler = {
          $(document).on('submit', '#search', function(e){
             e.preventDefault()
             let search = $(this.search).val();
-            let books = library.searchBooks(search);
+            let books = library.searchBooks(search);           
              
-             libraryView.clearView();
-              libraryView.showBooks(books, libraryAuthor.getAuthors());
-             
-             
+            libraryView.clearView();
+            libraryView.showBooks(books, libraryAuthor.getAuthors()); 
          });
     }
 };
