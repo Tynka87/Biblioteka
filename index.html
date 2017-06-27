@@ -51,12 +51,14 @@
                             <fieldset>
                                 <legend>
                                     <h3>Spis książek</h3>
-                                    <form class="navbar-form navbar-right" id="search">
-                                        <div class="form-group">
+                                    <form class="navbar-form navbar-right " id="search">
+                                        <div class="form-group ">
                                             <input type="text" class="form-control" id="search" placeholder="Search">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"id="searchSpan"></span>
                                         </div>
                                         <button type="submit" class="btn btn-default">Szukaj</button>
                                     </form>
+                       
                                 </legend>
                                 <div class="task-items">
                                     <ul class="d-flex flex-wrap">
@@ -77,12 +79,14 @@
                             <fieldset>
                                 <legend>
                                     <h3>Autorzy</h3>
-                                      <form class="navbar-form navbar-right" id="searchAuthor">
+                                    <form class="navbar-form navbar-right" id="searchAuthor">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="searchAuthor" placeholder="Search">
+                                            <input type="text" class="form-control" id="searchAuthor" placeholder="Search" value ="">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true" id="searchAuthorSpan"></span>
                                         </div>
                                         <button type="submit" class="btn btn-default">Szukaj</button>
                                     </form>
+
                                 </legend>
                                 <table class="table table-striped">
                                     <thead class="thead-default">

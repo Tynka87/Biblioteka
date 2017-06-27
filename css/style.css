@@ -15,8 +15,9 @@ h6 {
 p {
     font-family: Roboto;
 }
-h3{
-    display:inline;
+
+h3 {
+    display: inline;
 }
 
 .navbar.navbar-default {
@@ -55,6 +56,29 @@ h3{
     background-color: #5A88E7;
 }
 
+legend span.glyphicon.glyphicon-remove {
+    font-size: 1.5rem;
+    color: grey;
+    cursor: pointer;
+    cursor: hand;
+    position: absolute;
+    margin-left: -2rem;
+    margin-top: 0.8rem;
+    z-index: 1000;
+}
+#authors legend span.glyphicon.glyphicon-remove {
+    margin-top: 1.5rem;
+}
+
+fieldset legend form#search.navbar-form.navbar-right div.form-group{
+    position: relative;
+}
+/*
+fieldset legend form#search.navbar-form.navbar-right div.form-group input#search.form-control{
+    position: relative;
+}
+*/
+
 .task-items ul {
     list-style: none;
     padding: 0;
@@ -90,15 +114,15 @@ h3{
     position: relative;
     line-height: 100%;
     background-color: #efefef;
-    cursor: pointer;
+/*    cursor: pointer;*/
     border-top-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
     overflow: hidden;
     border: 6px #fff solid;
 }
 
-.align-self-stretch:hover .item-representation {  
-    background-color: #d6d3d3;   
+.align-self-stretch:hover .item-representation {
+    background-color: #d6d3d3;
     border: 6px #d6d3d3 solid;
 }
 
@@ -114,7 +138,6 @@ h3{
     bottom: -0.4rem;
     left: -1.0rem;
     font-size: 10rem;
-   
 }
 
 .clickAuthor {
@@ -132,17 +155,9 @@ h3{
     position: absolute;
     bottom: 0%;
     right: 0%;
-    cursor: pointer;
+    
     display: none;
 }
-
-
-/*
-.align-self-stretch:hover button.edit
- {
-    visibility: visible;
-}
-*/
 
 .align-self-stretch:hover .item-delete {
     display: block;
@@ -153,26 +168,8 @@ h3{
     font-size: 24px;
     color: #3c5b9b;
     border-radius: 50%;
+    cursor: pointer;
 }
-
-
-/*span.clickAuthor,*/
-
-
-/*
-button.edit {
-    visibility: hidden
+.item-delete i:hover {
+   transform: scale(1.5, 1.5);
 }
-*/
-
-
-/*
-    line-height: 1.5rem;
-    background-color: #E8EAF6;
-*/
-
-
-/*
-    padding: .1rem .19rem;
-}
-*/

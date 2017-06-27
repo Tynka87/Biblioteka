@@ -5,10 +5,10 @@ var libraryControler = {
         this.showFullBook();
         this.removeBook();
         this.addNewBook();
-        this.searchBooks
-        
-        
-        ();
+        this.searchBooks();
+        this.clearSearchBooks();
+
+
 
 
         $("body").on('submit', '#formBook', function () {
@@ -69,14 +69,20 @@ var libraryControler = {
             });
         });
     },
-    searchBooks: function(){
-         $(document).on('submit', '#search', function(e){
+    searchBooks: function () {
+        $(document).on('submit', '#search', function (e) {
             e.preventDefault()
             let search = $(this.search).val();
-            let books = library.searchBooks(search);           
-             
+            let books = library.searchBooks(search);
             libraryView.clearView();
-            libraryView.showBooks(books, libraryAuthor.getAuthors()); 
-         });
+            libraryView.showBooks(books, libraryAuthor.getAuthors());
+        });
+    },
+    clearSearchBooks: function () {
+        $("#library").on('click', '#searchSpan', function () {
+            $("#library fieldset legend input#search.form-control").val("");
+            libraryView.clearView();
+            libraryView.showBooks(library.getBooks(), libraryAuthor.getAuthors());
+        });
     }
 };
