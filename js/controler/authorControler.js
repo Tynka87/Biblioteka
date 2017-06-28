@@ -7,7 +7,8 @@ var authorControler = {
         this.addNewAuthor();
         this.removeAuthor();
         this.searchAuthors();
-        this.clearSearchBooks();
+        this.clearSearchAuthors();
+        this.sortAuthors();
 
         $("body").on('submit', '#formAuthor', function (e) {
             e.preventDefault();
@@ -84,11 +85,20 @@ var authorControler = {
 
         });
     },
-    clearSearchBooks: function () {
+    clearSearchAuthors: function () {
         $("#authors").on('click', '#searchAuthorSpan', function () {
             $("#authors fieldset legend input#searchAuthor.form-control").val("");
             authorView.clearViewAuthor();
             authorView.showAuthors(libraryAuthor.getAuthors());
+        });
+    },
+    sortAuthors: function () {
+        $("#authors").on('click', '.sort', function () {
+            let author = $(this).data("author");
+            let flag = $(this).val();
+            let sortName = libraryAuthor.sortAuthors(author,flag);
+            authorView.clearViewAuthor();
+            authorView.showAuthors(sortName);
         });
     }
 

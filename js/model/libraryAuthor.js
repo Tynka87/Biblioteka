@@ -29,13 +29,9 @@ var libraryAuthor = {
     },
 
     getAuthor: function (id) {
-        console.log(this.libraryAuthor.length);
         let author;
         this.libraryAuthor.forEach((a) => {
-            console.log("autor id " + a.getId() + ", typ: " + typeof a.getId());
-            console.log("szukane id " + id + ", typ: " + typeof id);
             if (a.getId() === id) {
-                console.log("znalazl a:" + JSON.stringify(a));
                 author = a;
             }
         });
@@ -111,6 +107,18 @@ var libraryAuthor = {
         }
 
         return newArrayAuthors;
+    },
+    sortAuthors: function (author, flag) {
+
+        if (flag == 0) {
+            $("#" + author).val("1");
+            return this.libraryAuthor.sort((a1, a2) => a1[author].localeCompare(a2[author]));
+        } else {
+            $("#" + author).val("0");
+            return this.libraryAuthor.sort((a1, a2) => a2[author].localeCompare(a1[author]));
+        }
+
+
     }
 
 };

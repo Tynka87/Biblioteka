@@ -66,18 +66,23 @@ legend span.glyphicon.glyphicon-remove {
     margin-top: 0.8rem;
     z-index: 1000;
 }
+
 #authors legend span.glyphicon.glyphicon-remove {
-    margin-top: 1.5rem;
+    margin-top: 1.6rem;
 }
 
-fieldset legend form#search.navbar-form.navbar-right div.form-group{
+fieldset legend form#search.navbar-form.navbar-right div.form-group {
     position: relative;
 }
-/*
-fieldset legend form#search.navbar-form.navbar-right div.form-group input#search.form-control{
-    position: relative;
+
+#authors table span.glyphicon.glyphicon-sort {
+    color: grey;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
-*/
+#authors table span.glyphicon.glyphicon-sort:hover {
+    color: #5A88E7;
+}
 
 .task-items ul {
     list-style: none;
@@ -86,7 +91,6 @@ fieldset legend form#search.navbar-form.navbar-right div.form-group input#search
 }
 
 .task-items ul li {
-    /*    display: inline-block;*/
     position: relative;
     font-size: 14px;
     font-family: Poppins;
@@ -114,7 +118,7 @@ fieldset legend form#search.navbar-form.navbar-right div.form-group input#search
     position: relative;
     line-height: 100%;
     background-color: #efefef;
-/*    cursor: pointer;*/
+    /*    cursor: pointer;*/
     border-top-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
     overflow: hidden;
@@ -155,7 +159,6 @@ fieldset legend form#search.navbar-form.navbar-right div.form-group input#search
     position: absolute;
     bottom: 0%;
     right: 0%;
-    
     display: none;
 }
 
@@ -170,6 +173,7 @@ fieldset legend form#search.navbar-form.navbar-right div.form-group input#search
     border-radius: 50%;
     cursor: pointer;
 }
+
 .item-delete i:hover {
-   transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
 }

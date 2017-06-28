@@ -12,8 +12,6 @@ var libraryView = {
             for (var i = 0; i < books.length; i++) {
 
                 a = libraryAuthor.getAuthor(parseInt(books[i].getAuthor()));
-                console.log(a);
-//                console.log('nr: ' + nr);
                 let newTile = tile;
                 newTile = newTile.replace(/{{title}}/g, books[i].getTitle())
                     .replace("{{name}}", a.getName())
