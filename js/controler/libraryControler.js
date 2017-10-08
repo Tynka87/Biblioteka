@@ -80,6 +80,7 @@ var libraryControler = {
     },
     clearSearchBooks: function () {
         $("#library").on('click', '#searchSpan', function () {
+            
             $("#library fieldset legend input#search.form-control").val("");
             libraryView.clearView();
             libraryView.showBooks(library.getBooks(), libraryAuthor.getAuthors());

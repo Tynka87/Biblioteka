@@ -56,20 +56,54 @@ h3 {
     background-color: #5A88E7;
 }
 
-legend span.glyphicon.glyphicon-remove {
+.glyphicon.glyphicon-remove {
     font-size: 1.5rem;
     color: grey;
     cursor: pointer;
-    cursor: hand;
+    /* cursor: hand;
     position: absolute;
-    margin-left: -2rem;
-    margin-top: 0.8rem;
-    z-index: 1000;
+    left: 14.8rem;
+    top: 0.8rem;
+    z-index: 1000;*/
 }
 
-#authors legend span.glyphicon.glyphicon-remove {
-    margin-top: 1.6rem;
+.right-inner-addon {
+    position: relative;
 }
+
+.col-xs-3 {
+    padding-right: 4px;
+}
+
+.right-inner-addon input {
+    padding-right: 30px;
+}
+
+.right-inner-addon i {
+    position: absolute;
+    right: 7.2rem;
+    padding: 10px 12px;
+}
+
+.left-inner-addon {
+    position: relative;
+}
+
+.left-inner-addon input {
+    padding-left: 30px;
+}
+
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 2px;
+    right: 0px;
+}
+
+
+/*#authors legend .glyphicon.glyphicon-remove {
+   left: 105.6rem;
+    top: 1.8rem;
+}*/
 
 fieldset legend form#search.navbar-form.navbar-right div.form-group {
     position: relative;
@@ -80,6 +114,7 @@ fieldset legend form#search.navbar-form.navbar-right div.form-group {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
 #authors table span.glyphicon.glyphicon-sort:hover {
     color: #5A88E7;
 }
@@ -123,6 +158,12 @@ fieldset legend form#search.navbar-form.navbar-right div.form-group {
     border-bottom-left-radius: 2rem;
     overflow: hidden;
     border: 6px #fff solid;
+}
+
+.align-self-stretch span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .align-self-stretch:hover .item-representation {
@@ -177,3 +218,6 @@ fieldset legend form#search.navbar-form.navbar-right div.form-group {
 .item-delete i:hover {
     transform: scale(1.5, 1.5);
 }
+
+
+/*...............................................*/

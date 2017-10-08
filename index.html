@@ -8,10 +8,9 @@
     <title>Biblioteka</title>
     <link href="css/slideoutwidget.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -52,17 +51,18 @@
                                 <legend>
                                     <h3>Spis książek</h3>
                                     <form class="navbar-form navbar-right " id="search">
-                                        <div class="form-group ">
-                                            <input type="text" class="form-control" id="search" placeholder="Search">
-                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"id="searchSpan"></span>
+
+                                        <div class="right-inner-addon">
+                                            <i class="glyphicon glyphicon-remove" aria-hidden="true" id="searchSpan"></i>
+                                            <input type="search" class="form-control" id="search" placeholder="Search" value="" />
+                                            <button type="submit" class="btn btn-default">Szukaj</button>
                                         </div>
-                                        <button type="submit" class="btn btn-default">Szukaj</button>
+
                                     </form>
-                       
+
                                 </legend>
                                 <div class="task-items">
                                     <ul class="d-flex flex-wrap">
-
 
                                     </ul>
                                 </div>
@@ -80,23 +80,32 @@
                                 <legend>
                                     <h3>Autorzy</h3>
                                     <form class="navbar-form navbar-right" id="searchAuthor">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="searchAuthor" placeholder="Search" value ="">
-                                            <span class="glyphicon glyphicon-remove" aria-hidden="true" id="searchAuthorSpan"></span>
+                                 <div class="col-xs-8" >    
+                                        <div class="left-inner-addon">
+                                            <i class="glyphicon glyphicon-remove" aria-hidden="true" id="searchAuthorSpan"></i>
+                                            <input type="search" class="form-control" id="searchAuthor" placeholder="Search" value="" />
+                                            
                                         </div>
-                                        <button type="submit" class="btn btn-default">Szukaj</button>
+                                        </div>   
+                                               <div class="col-xs-3" >
+    <div class="right-inner-addon">
+        <button type="submit" class="btn btn-default ">Szukaj</button>
+    </div>
+     </div>                                 
+                                      
+                                        
                                     </form>
 
                                 </legend>
                                 <table class="table table-striped">
                                     <thead class="thead-default">
                                         <tr>
-
-                                            <th>Id</th>
+                                            <th>Id
+                                                <span class="glyphicon glyphicon-sort sort" aria-hidden="true" data-author="id" id="id" value="0"></span></th>
                                             <th>Imię
                                                 <span class="glyphicon glyphicon-sort sort" aria-hidden="true" data-author="name" id="name" value="0"></span></th>
-                                            <th>Nazwisko 
-                                                <span class="glyphicon glyphicon-sort sort" aria-hidden="true" data-author="surname" id="surname"value="0"></span></th>
+                                            <th>Nazwisko
+                                                <span class="glyphicon glyphicon-sort sort" aria-hidden="true" data-author="surname" id="surname" value="0"></span></th>
                                             <th></th>
                                         </tr>
                                     </thead>

@@ -66,7 +66,9 @@ var authorControler = {
                 $('.form-group #index').remove();
                 $('.modal-footer .btn-default').remove();
                 $('.modal').modal('show');
-                $('#id').val(generatorId());
+                let gen = generatorId();
+                console.log(gen);
+                $('.modal-body #id').val(gen);
 
             });
         });
@@ -93,7 +95,8 @@ var authorControler = {
         });
     },
     sortAuthors: function () {
-        $("#authors").on('click', '.sort', function () {
+        $("#authors").on('click', '.sort', function (e) {
+            e.preventDefault()
             let author = $(this).data("author");
             let flag = $(this).val();
             let sortName = libraryAuthor.sortAuthors(author,flag);

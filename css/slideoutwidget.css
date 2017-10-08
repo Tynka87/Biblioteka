@@ -60,6 +60,13 @@
     text-decoration: none;
 }
 
+.widget-book a:hover,
+.widget-author a:hover {
+	color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 
 

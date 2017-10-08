@@ -49,8 +49,8 @@ var libraryAuthor = {
         return this.libraryAuthor[number];
     },
     getAuthorInTable: function (author) {
-        var myString = author;
-        var authorTable = myString.split(/\s* \s*/);
+        var myString = author.trim();
+        var authorTable = myString.split(/\s* \s*/).filter(s => s.length > 0);
         return authorTable;
     },
     searchAuthors: function (search) {
@@ -108,17 +108,38 @@ var libraryAuthor = {
 
         return newArrayAuthors;
     },
+
     sortAuthors: function (author, flag) {
+
+        let comparator = this.buildComparator(author);
 
         if (flag == 0) {
             $("#" + author).val("1");
-            return this.libraryAuthor.sort((a1, a2) => a1[author].localeCompare(a2[author]));
+            return this.libraryAuthor.sort(comparator);
         } else {
             $("#" + author).val("0");
-            return this.libraryAuthor.sort((a1, a2) => a2[author].localeCompare(a1[author]));
+            return this.libraryAuthor.sort(comparator).reverse();
         }
 
+    },
+    
+    buildComparator: function (author) {
+        switch (author) {
+            case 'id':
+                return (a1, a2) => a1[author] - a2[author];
+            case 'name':
+            case 'surname':
+                return (a1, a2) => a1[author].localeCompare(a2[author]);
+
+        };
 
     }
-
+    /*,
+        stringComperator: function (a1, a2) {
+            return a1[author].localeCompare(a2[author]);
+        },
+        numberComperator: function (a1, a2) {
+            return a1 - a2;
+        }
+    */
 };

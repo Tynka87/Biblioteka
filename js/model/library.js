@@ -51,7 +51,7 @@ var library = {
 
     searchBooks: function (search) {
         let books = this.library.filter((book) =>
-            book.getTitle().toLowerCase().includes(search.toLowerCase())
+            book.getTitle().toLowerCase().includes(search.toLowerCase().trim())
         );
         if (books.length === 0) {
             let authorTabl = libraryAuthor.getAuthorInTable(search);
